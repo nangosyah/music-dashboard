@@ -18,7 +18,9 @@ library(httr2)
 
 ```{r createaccesstoken}
 Sys.getenv("MY_CLIENT_ID")
+Sys.getenv("MY_CLIENT_SECRET")
 ```
+
 
 ```{r printstarwars}
 head(starwars)
