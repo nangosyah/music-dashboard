@@ -16,15 +16,85 @@ library(tidyverse)
 library(httr2)
 ```
 
+
 ```{r createaccesstoken}
-Sys.getenv("SPOTIFY_CLIENT_ID")
-Sys.getenv("SPOTIFY_CLIENT_SECRET")
+#| echo: false
+#| include: false
+
+client_id <-  Sys.getenv("SPOTIFY_CLIENT_ID")
+client_secret <-  Sys.getenv("SPOTIFY_CLIENT_SECRET")
+
+response <- request("https://accounts.spotify.com/api/token") |>
+  req_method("POST") |>
+  req_body_raw(
+    paste0(
+      client_id,
+      "&client_secret=",
+      client_secret
+    ),
+    type = "application/x-www-form-urlencoded"
+  ) |>
+  req_perform() |>
+  resp_body_json()
+
+spotify_access_token <- response$access_token
 ```
 
 
-```{r printstarwars}
-head(starwars)
+
+```{r getB4BARSplaylist}
+# curl_translate("curl --request GET \
+#   --url https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj \
+#   --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'")
+
+tth <- request("https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj") |> 
+  req_method("GET") |> 
+  req_headers(
+    Authorization = paste0("Bearer ", spotify_access_token)) |> 
+  req_perform() |>
+  resp_body_json()
 ```
+
+
+
+```{r extractsongs}
+B4Bars <- data.frame(
+  song_name = unlist(lapply(tth$tracks$items, FUN = function(x) {x$track$name})),
+  song_id = unlist(lapply(tth$tracks$items, FUN = function(x) {x$track$id})),
+  artist_name = unlist(lapply(tth$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
+  arlbum_art = unlist(lapply(tth$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
+  track_duration = unlist(lapply(tth$tracks$items, FUN = function(item) {item$track$duration_ms})),
+  popularity = unlist(lapply(tth$tracks$items, FUN = function(item) {item$track$popularity})),
+ explicit = unlist(lapply(tth$tracks$items, FUN = function(item) {item$track$explicit})))
+```
+
+
+
+```{r extractAudioAnalysis}
+# curl_translate("curl --request GET \
+#   --url https://api.spotify.com/v1/audio-analysis/11dFghVXANMlKmJXsNCbNl \
+#   --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'")
+
+B4Bars_Analysis <- vector(mode = "list", length = 82)
+
+for (i in 1:82) {
+  audio_analysis_url <- paste0("https://api.spotify.com/v1/audio-analysis/", B4Bars$song_id[i])
+  audio_analysis <- request(audio_analysis_url) |>
+    req_method("GET") |>
+    req_headers(
+      Authorization = paste0("Bearer ", spotify_access_token)
+    ) |>
+    req_perform() |>
+    resp_body_json()
+  
+  # tempo for each section
+  B4Bars_Analysis[[i]] <- unlist(lapply(audio_analysis$sections, function(x) x$tempo))
+}
+
+# add tempo to B4Bars
+B4Bars$tempo <- I(B4Bars_Analysis)
+```
+
 
 ## Column {width="65%"}
 
@@ -36,7 +106,42 @@ Nangosyah
 
 ### Row {height="70%"}
 
-Wamaleero
+```{r, sendtoojs}
+#| echo: false
+#| include: false
+ojs_define(rap_ojs = B4Bars)
+```
+
+
+```{ojs}
+//| expandable: false
+
+// import data
+rap_hits = transpose(rap_ojs)
+
+// create dropdown menu
+viewof songDropdown = Inputs.select(
+  rap_hits.map(d=> d.song_name),
+  {
+  label: "choose a song",
+  unique: true
+  }
+)
+```
+
+<iframe 
+    style="border-radius: 12px" 
+    src="https://open.spotify.com/embed/track/0UwtT6ePrSWejSJeJ0wxWU?utm_source=generator" 
+    width="100%" 
+    height="352" 
+    frameBorder="0" 
+    allowfullscreen 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+</iframe>
+
+
+
 
 ### Row {height="20%"}
 

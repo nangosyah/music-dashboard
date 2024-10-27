@@ -1,8 +1,13 @@
 /*-- scss:defaults --*/
 // Base document colors
-$body-bg: #181818;
-$body-color: white;
-$link-color: #75AADB;
+$body-bg: #f4f4f4;             // Light gray background
+$body-color: #333333;           // Dark gray text for good readability
+$link-color: #0073e6;           // Slightly brighter blue link color
 
 // Code blocks
-$code-block-bg-alpha: -.8;
+$code-block-bg-alpha: 0.1;      // Lighten the code block background alpha
+
+// Optional code block color to stand out on a light background
+$code-block-bg: #f9f9f9;        // Light background for code blocks
+$code-block-color: #1a1a1a;     // Dark text color for code
+$code-border-color: #e0e0e0;    // Border color for code blocks to add definition
