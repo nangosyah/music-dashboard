@@ -13,6 +13,11 @@ Tom Tash
 #| echo: false
 #| include: false
 library(tidyverse)
+library(httr2)
+```
+
+```{r createaccesstoken}
+Sys.getenv("MY_CLIENT_ID")
 ```
 
 ```{r printstarwars}
