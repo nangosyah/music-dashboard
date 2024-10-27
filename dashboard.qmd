@@ -7,7 +7,7 @@ format:
 
 ## Column {width="35%"}
 
-Tom Tash Wellard
+Tom Tash
 
 ```{r loadpackages}
 #| echo: false
