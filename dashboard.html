@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Today’s Music – My Music Dashboard</title>
+<title>Tom’s Playlist – My Music Dashboard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -35,10 +69,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
 <script src="site_libs/quarto-dashboard/stickythead.js"></script>
 <script src="site_libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
@@ -74,6 +108,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script type="ojs-define">
+{"contents":[{"name":"rap_ojs","value":{"song_name":["Never Forgettin’","CURSED [Feat. Kirk Knight, VITA]","Get Lit Or Die Tryin’","PRADA U","Self Made","Lost Souls [Feat. Denzel Curry, Busta Rhymes]","Wanna Be Loved","Head High","GOODMAN","NO REPORT CARD","MESSAGE IN A BOTTLE","HOLLANDAISE","GANG'NEM","Hive (feat. Vince Staples & Casey Veggies)","Just Another Day","good kid","Work Out","Goldie","Adam and Eve","u","GOTTA RAP","Life Is Good (feat. Drake)","Unstoppable","GOTTA RAP","Speechless","GO OFF","FALLACY","CHURCH ON THE MOVE","POSITIVE VIBES ONLY","Ali Bomaye","Freedom","How We Do","Put You On The Game","Dreams","Nosetalgia","Wow Freestyle (feat. Kendrick Lamar)","HiiiPower","UOENO","1Train (feat. Kendrick Lamar, Joey Bada$$, Yelawolf, Danny Brown, Action Bronson & Big K.R.I.T.)","Control (feat. Jay Electronica & Big Sean)","Driving Ms Daisy","Young Jesus","Lord Willin'","Soul Food","Fade Away","You Should Know","Nobody (feat. Ms. Lauryn Hill)","Reparations","Find a Way","Chum","The Heart Pt3","Da Art of Storytellin' (Pt. 2)","SpottieOttieDopaliscious","Liberation (with Cee-Lo)","Exhibit C","Rigamortus","N.Y. State of Mind","Who Wants What (feat. Ab-Soul)","Where I'm From","Johnny P's Caddy","Sixteen","A.D.H.D","Ignorance Is Bliss","Aquemini","The Story of O.J.","If You Know You Know","Count Me Out","Pound Cake / Paris Morton Music 2","Numbers On The Boards","See No Evil","27 Summers","infinity (888) - feat. Joey Bada$$","Wants and Needs (feat. Lil Baby)","Aquamarine (feat. Michael Kiwanuka)","Mural","The Blacker The Berry","F*ckwithmeyouknowigotit","Tis The Season (feat. Joey Bada$$)","Tity and Dolla (feat. Hugh Augustine & Jay Rock)","Blessings","Get Down","Where I Belong"],"song_id":["0UwtT6ePrSWejSJeJ0wxWU","0pBms5AreE0CPWuUMFnTlH","0JyqrdyyjXMMpdrdrKTzUH","71lNmjIsh04rw2SJ35TfnP","4MtkJwdifRRij7xKdnafzf","59SmmdoqrevqAI3nIU0nE1","0eazZ0OZtEGcNug0xL7wbS","6Nit8zUQiZ53JfkLgoID6h","3ZqSRejRYwhv0T7UcJJCml","6ksdH1cQvHlVMkJ5LBN6vm","5OsRABgzTPgs7sPBomSSsD","2tsOYiP106WH5jqTQlIs34","4qRzgvOBTiOi6XdHgDFRAl","6JKoTnberZoBgUuxa6l4Kh","2LQTHb4rEtKpxQgeqdesmc","0PKJxo97zXT8oAwl2zFnPh","2wAJTrFhCnQyNSD3oUgTZO","31G9RaSaDOI2NWcpnIp734","0BSPhsCKfwENstErymcD80","1bxEpNR75Hq3T2oF9AZjt8","6BktHfgC3lb8szkKoy5lk9","1K5KBOgreBi5fkEHvg5ap3","5xembA6CsmFfo0U7EmtDWH","6BktHfgC3lb8szkKoy5lk9","1N9fCcMU7wCXbNO3EpwPkd","2g3jf2e9wcwqkIMAM1wN3i","5DhOYzcPjlDmlU5r8nLJRY","1D5fBK4jRwqjKfOsgSJZM3","668imX7wYVdRZcVY4JOMOd","0LFcFGLYTX6UmeIdO7NVd7","1Y7PcAoFbvlTWGX75kzyf5","4PmMVdIFpJTB9WQbmILf4p","0e7S689mFbBnIWTWtjc4b4","5F7caGhe84C6ONva5S8yXF","7aK5rlTVxSgcqShPMI1TTH","0gV5B7zmJkS1aaH9APokrH","4WEuEfFiczWxblHyuucSBL","4wuqlQXpPpEVRhCCyvoe1u","1eLU27PPFxBhbp1CBjPh9J","18lRXAROle06PhNpCqRoSV","6IlQTriFgUeEbVx3Y10sia","0KiKfllNTmhImvXVIHqR0z","4q6oNFTjZmJqkIgPdp8iR1","3lWCa9e0KhDghboM5L9C6d","4QRWA5UqYU1st9aO0UfxOj","3BT1sqLs9ElWP6llB21Urr","1W7gmQ7AgRMIUthrV0OD0h","7fUUkCwZ74a7y2RysJtYtc","054hu8JJu9GAtiDaar2pKM","6plT7nFGiXKSBP9HFSI4ef","2NsakyMtLkF202GZQT4klh","2vjgepbkQg5jH8ujrKEOin","4GdB5M7GbwLZLouktYocFC","1H6S9OkozTNvcASUX4Bfgb","4Mb5DVgLbFjlSwcuMdOw7B","2lD6AoA8qf2t4Dkf2TcmNK","0trHOzAhNpGCsGBEu7dOJo","3CoeJWLewourwQO1JGL6rT","0R0zZnqPg7yOWb4PRmW8nC","59ClUavkkfRhryajZBn2Lf","0SliiopgwbmEG1OmnzBDMY","2Fw5S2gaOSZzdN5dFoC2dj","53mCo1wDJ12iZNq9LgIeg2","4V3N5LvUOh3yDPP16cwAhE","6JpN5w95em8SODPiM7W2PH","6bGwKHXHNLmTy6yt147FPh","6BU1RZexmvJcBjgagVVt3M","4RI9eX7jNcdaQOJifn7t6z","4XkXgUNDVBMj3oJoE8yspZ","0ndpJtfKGuGM3pyNwnwSUx","1FHKdoJN3MemqZyD1ArZwc","7J2gyNghNTzl4EsLhXp01Q","65OVbaJR5O1RmwOQx0875b","4qlZZSn05FRqzEexW9N6OP","2zWZV7b1xu1qZPaMjavvpS","5Mtt6tZSZA9cXTHGSGpyh0","5n86k4ft5H7OK4qdSUfYoz","54HSrEMLsBUgt4kkvnwkFw","2NoKRHt8LVpnQMVl3TPwvu","1bzM1cd6oqFozdr4wK6HdR","6j3jBxxoEn88ZJsOz5qKYL","4xxcd6cnmFfj67AmnaF6tc"],"artist_name":["Meechy Darko","Meechy Darko","Meechy Darko","Meechy Darko","Erick the Architect","Meechy Darko","Joey Bada$$","Joey Bada$$","Ab-Soul","Ab-Soul","Ab-Soul","Ab-Soul","Ab-Soul","Earl Sweatshirt","Dr. Dre","Kendrick Lamar","J. Cole","A$AP Rocky","Nas","Kendrick Lamar","Ab-Soul","Future","Jayy Grams","Ab-Soul","Nas","Ab-Soul","Ab-Soul","Ab-Soul","Ab-Soul","The Game","The Game","The Game","The Game","The Game","Pusha T","Jay Rock","Kendrick Lamar","Black Hippy","A$AP Rocky","Black Hippy","Logic","Logic","Logic","Logic","Logic","Rapsody","Nas","Black Vulcanite","A Tribe Called Quest","Earl Sweatshirt","Black Hippy","Outkast","Outkast","Outkast","Jay Electronica","Kendrick Lamar","Nas","Russ","JAY-Z","Benny The Butcher","Rick Ross","Kendrick Lamar","Kendrick Lamar","Outkast","JAY-Z","Pusha T","Kendrick Lamar","Drake","Pusha T","The Game","Nas","XXXTENTACION","Drake","Danger Mouse","Lupe Fiasco","Kendrick Lamar","JAY-Z","Audio Push","Isaiah Rashad","Big Sean","Various Artists","Joey Bada$$"],"album_art":["https://i.scdn.co/image/ab67616d0000b273637dc5bb2aec190e012230a6","https://i.scdn.co/image/ab67616d0000b273637dc5bb2aec190e012230a6","https://i.scdn.co/image/ab67616d0000b273637dc5bb2aec190e012230a6","https://i.scdn.co/image/ab67616d0000b273637dc5bb2aec190e012230a6","https://i.scdn.co/image/ab67616d0000b273ee1210b94d270037cdefdf63","https://i.scdn.co/image/ab67616d0000b273637dc5bb2aec190e012230a6","https://i.scdn.co/image/ab67616d0000b273aacc3ddf3bfa01f4bd44cacc","https://i.scdn.co/image/ab67616d0000b273aacc3ddf3bfa01f4bd44cacc","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b27346f9bf1154c7205b0e8b1667","https://i.scdn.co/image/ab67616d0000b2732fc5548485c214ab53477a96","https://i.scdn.co/image/ab67616d0000b27378de8b28de36a74afc0348b5","https://i.scdn.co/image/ab67616d0000b27399da48a530f6ca2ef86da3cc","https://i.scdn.co/image/ab67616d0000b2732ae92030b51fb8135d694af9","https://i.scdn.co/image/ab67616d0000b2734c2ab67f7da8208998f35d51","https://i.scdn.co/image/ab67616d0000b273cdb645498cd3d8a2db4d05e1","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b273935d8d5369bc55e74a39303e","https://i.scdn.co/image/ab67616d0000b2739b704dd3ccb6eb7083415b41","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b27390988beeecde0598e8fe5092","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf","https://i.scdn.co/image/ab67616d0000b273a65779c8c92dff73f8189800","https://i.scdn.co/image/ab67616d0000b273a65779c8c92dff73f8189800","https://i.scdn.co/image/ab67616d0000b273b1d860ab1ba847e778b2796d","https://i.scdn.co/image/ab67616d0000b273b1d860ab1ba847e778b2796d","https://i.scdn.co/image/ab67616d0000b273b1d860ab1ba847e778b2796d","https://i.scdn.co/image/ab67616d0000b273861ecd2783b33bde98760364","https://i.scdn.co/image/ab67616d0000b273c30d59775ce5ef3f59138f59","https://i.scdn.co/image/ab67616d0000b273eddb2639b74ac6c202032ebe","https://i.scdn.co/image/ab67616d0000b27357939d973a8579b1ddffe15a","https://i.scdn.co/image/ab67616d0000b2732ae92030b51fb8135d694af9","https://i.scdn.co/image/ab67616d0000b2733521c23672c236b864e0433e","https://i.scdn.co/image/ab67616d0000b273a4c35326f6fe6676c10e31ac","https://i.scdn.co/image/ab67616d0000b273f0f7649257d4b99460929ced","https://i.scdn.co/image/ab67616d0000b273f0f7649257d4b99460929ced","https://i.scdn.co/image/ab67616d0000b273a4c35326f6fe6676c10e31ac","https://i.scdn.co/image/ab67616d0000b273f0f7649257d4b99460929ced","https://i.scdn.co/image/ab67616d0000b2732a1b6193d2f7f69d113a7ed0","https://i.scdn.co/image/ab67616d0000b273d0673d1dd6938dad8530823b","https://i.scdn.co/image/ab67616d0000b2737ca6a6838ade9d646c848003","https://i.scdn.co/image/ab67616d0000b273b1ddb9f5f519e0d37bc94a53","https://i.scdn.co/image/ab67616d0000b27346f9bf1154c7205b0e8b1667","https://i.scdn.co/image/ab67616d0000b273dd1e5c4720d00722fa0cd3dc","https://i.scdn.co/image/ab67616d0000b273377a6d2051b23afea65ee41a","https://i.scdn.co/image/ab67616d0000b273377a6d2051b23afea65ee41a","https://i.scdn.co/image/ab67616d0000b273377a6d2051b23afea65ee41a","https://i.scdn.co/image/ab67616d0000b273096a5830acc45aff40d48095","https://i.scdn.co/image/ab67616d0000b273eddb2639b74ac6c202032ebe","https://i.scdn.co/image/ab67616d0000b273045fc920ecf4f8094888ec26","https://i.scdn.co/image/ab67616d0000b273fc20c5dacda34b8609bcbe78","https://i.scdn.co/image/ab67616d0000b273019d21fe4f3ecbc818825c59","https://i.scdn.co/image/ab67616d0000b2736f7e02a599bf17973444fdee","https://i.scdn.co/image/ab67616d0000b273b3ed0d541b9c8508d3b6f729","https://i.scdn.co/image/ab67616d0000b273eddb2639b74ac6c202032ebe","https://i.scdn.co/image/ab67616d0000b2739b035b031d9f0a6a75ae464e","https://i.scdn.co/image/ab67616d0000b273377a6d2051b23afea65ee41a","https://i.scdn.co/image/ab67616d0000b2737513c4956ea5552caf02eab6","https://i.scdn.co/image/ab67616d0000b273263555eebbe2b375593aa31e","https://i.scdn.co/image/ab67616d0000b2732e02117d76426a08ac7c174f","https://i.scdn.co/image/ab67616d0000b273adfb5909ec66db5fbb4d06c8","https://i.scdn.co/image/ab67616d0000b273861ecd2783b33bde98760364","https://i.scdn.co/image/ab67616d0000b273a65779c8c92dff73f8189800","https://i.scdn.co/image/ab67616d0000b273cfae92bfa188457b4bee0055","https://i.scdn.co/image/ab67616d0000b273806c160566580d6335d1f16c","https://i.scdn.co/image/ab67616d0000b2738b20e4631fa15d3953528bbc","https://i.scdn.co/image/ab67616d0000b2738368e609068e83b4853858ea","https://i.scdn.co/image/ab67616d0000b273cc5c6f9f9d6ca3353dbb6c75","https://i.scdn.co/image/ab67616d0000b273cdb645498cd3d8a2db4d05e1","https://i.scdn.co/image/ab67616d0000b2734af3be606885e7f5559f4031","https://i.scdn.co/image/ab67616d0000b2730806b9b4d7ba20b1406bac89","https://i.scdn.co/image/ab67616d0000b273fbdec8696ff05ae19265dfa0","https://i.scdn.co/image/ab67616d0000b27350192d5f728fea13fb3af203","https://i.scdn.co/image/ab67616d0000b2734cd0e005711f4f9c37cf43ad","https://i.scdn.co/image/ab67616d0000b273aacc3ddf3bfa01f4bd44cacc"],"track_duration":[196857,262392,211685,153113,208148,272353,215480,180826,208664,170803,279536,259130,250488,277240,141866,214120,235320,192066,250760,268493,243618,237918,178211,243618,186934,267845,213912,166403,232055,372706,346880,235533,254133,286453,216066,175213,279854,342285,372173,450230,240586,211573,208666,292933,287400,377386,282192,256545,203733,243773,270938,172026,426853,526373,331440,168591,293973,323303,266733,225000,495573,215509,210494,319240,231760,202120,283642,433800,163586,284293,102798,176590,192956,238440,528880,328826,243413,263226,298035,252040,266866,188386],"popularity":[27,29,32,40,37,27,45,54,38,40,37,39,34,54,45,53,79,62,48,60,38,67,39,38,41,35,34,32,27,59,26,73,52,54,59,63,64,48,62,34,45,50,49,50,50,18,48,1,33,57,33,43,56,44,49,61,70,27,43,57,43,71,52,53,58,52,75,61,47,40,43,71,73,0,41,61,48,28,50,58,10,42],"explicit":["explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","clean","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","clean","explicit","clean","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit","clean","explicit","explicit","explicit","explicit","explicit","explicit","explicit","explicit"],"release_date":["2022-08-26","2022-08-26","2022-08-26","2022-08-26","2021-10-14","2022-08-26","2022-07-22","2022-07-22","2022-12-16","2022-12-16","2022-12-16","2022-12-16","2022-12-16","2013-08-16","2015-08-21","2012-10-22","2011-09-27","2013","2018-06-15","2015-03-16","2022-12-16","2020-05-15","2020-04-17","2022-12-16","2021-12-24","2022-12-16","2022-12-16","2022-12-16","2022-12-16","2012-01-01","2012-01-01","2005","2005","2005","2013-10-31","2018-06-15","2011-07-02","2019-07-22","2013","2014-01-07","2014-10-21","2015-11-13","2015-11-13","2014-10-21","2015-11-13","2017-09-22","2021-08-06","2016-09-05","1999-10-26","2013-08-16","2014-09-15","1998-09-29","1998-09-29","1998-09-29","2009-12-22","2011-07-02","1994-04-19","2020-11-17","1997-11-04","2022-03-11","2012-01-01","2011-07-02","2010-09-14","1998-09-29","2017-07-07","2018-05-25","2022-05-13","2013-01-01","2013-10-31","2012-01-01","2020-08-21","2018-03-16","2021-03-05","2022-08-09","2015-01-20","2015-03-16","2013-07-04","2013-09-09","2016-09-02","2015-02-23","2019-04-05","2022-07-22"],"album_type":["album","album","album","album","single","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","album","single","album","album","album","album","album","album","album","album","album","album","compilation","album","album","album","album","album","single","album","album","single","album","album","album","album","album","album","album","album","album","album","album","album","album","album","single","single","album","album","album","single","album","album","compilation","album"],"genres":["underground hip hop","underground hip hop","underground hip hop","underground hip hop","underground hip hop","underground hip hop","conscious hip hop, hip hop, rap","conscious hip hop, hip hop, rap","conscious hip hop, hip hop, rap, underground hip hop","conscious hip hop, hip hop, rap, underground hip hop","conscious hip hop, hip hop, rap, underground hip hop","conscious hip hop, hip hop, rap, underground hip hop","conscious hip hop, hip hop, rap, underground hip hop","alternative hip hop, drumless hip hop, experimental hip hop, hip hop, rap, underground hip hop","g funk, gangster rap, hip hop, rap, west coast rap","conscious hip hop, hip hop, rap, west coast rap","conscious hip hop, hip hop, north carolina hip hop, rap","east coast hip hop, hip hop, rap","conscious hip hop, east coast hip hop, gangster rap, hardcore hip hop, hip hop, queens hip hop, rap","conscious hip hop, hip hop, rap, west coast rap","conscious hip hop, hip hop, rap, underground hip hop","atl hip hop, hip hop, rap, southern hip hop, trap","baltimore hip hop","conscious hip hop, hip hop, rap, underground hip hop","conscious hip hop, east coast hip hop, gangster rap, hardcore hip hop, hip hop, queens hip hop, rap","conscious hip hop, hip hop, rap, underground hip hop","conscious hip hop, hip hop, rap, underground hip hop","conscious hip hop, hip hop, rap, underground hip hop","conscious hip hop, hip hop, rap, underground hip hop","detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap","detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap","detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap","detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap","detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap","gangster rap, hip hop, pop rap, rap, southern hip hop, trap, virginia hip hop","conscious hip hop, hip hop, rap, southern hip hop, trap","conscious hip hop, hip hop, rap, west coast rap","underground hip hop","east coast hip hop, hip hop, rap","underground hip hop","conscious hip hop, hip hop, pop rap, rap","conscious hip hop, hip hop, pop rap, rap","conscious hip hop, hip hop, pop rap, rap","conscious hip hop, hip hop, pop rap, rap","conscious hip hop, hip hop, pop rap, rap","alternative r&b, north carolina hip hop, trap queen","conscious hip hop, east coast hip hop, gangster rap, hardcore hip hop, hip hop, queens hip hop, rap","namibian pop","conscious hip hop, east coast hip hop, golden age hip hop, hip hop, jazz rap, queens hip hop","alternative hip hop, drumless hip hop, experimental hip hop, hip hop, rap, underground hip hop","underground hip hop","atl hip hop, dirty south rap, hip hop, old school atlanta hip hop, rap, southern hip hop","atl hip hop, dirty south rap, hip hop, old school atlanta hip hop, rap, southern hip hop","atl hip hop, dirty south rap, hip hop, old school atlanta hip hop, rap, southern hip hop","alternative hip hop, conscious hip hop, drumless hip hop, hip hop, psychedelic hip hop","conscious hip hop, hip hop, rap, west coast rap","conscious hip hop, east coast hip hop, gangster rap, hardcore hip hop, hip hop, queens hip hop, rap","hawaiian hip hop, pop rap","east coast hip hop, gangster rap, hip hop, pop rap, rap","alternative hip hop, boom bap, buffalo hip hop, hip hop, upstate ny rap","dirty south rap, gangster rap, hip hop, rap, southern hip hop, trap","conscious hip hop, hip hop, rap, west coast rap","conscious hip hop, hip hop, rap, west coast rap","atl hip hop, dirty south rap, hip hop, old school atlanta hip hop, rap, southern hip hop","east coast hip hop, gangster rap, hip hop, pop rap, rap","gangster rap, hip hop, pop rap, rap, southern hip hop, trap, virginia hip hop","conscious hip hop, hip hop, rap, west coast rap","canadian hip hop, canadian pop, hip hop, pop rap, rap","gangster rap, hip hop, pop rap, rap, southern hip hop, trap, virginia hip hop","detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap","conscious hip hop, east coast hip hop, gangster rap, hardcore hip hop, hip hop, queens hip hop, rap","emo rap, miami hip hop, rap","canadian hip hop, canadian pop, hip hop, pop rap, rap","alternative hip hop, mashup","chicago rap, conscious hip hop, hip hop, political hip hop, pop rap, rap, southern hip hop","conscious hip hop, hip hop, rap, west coast rap","east coast hip hop, gangster rap, hip hop, pop rap, rap","deep underground hip hop, soul flow","hip hop, rap, tennessee hip hop, underground hip hop","detroit hip hop, hip hop, pop rap, r&b, rap, southern hip hop, trap","","conscious hip hop, hip hop, rap"]}}]}
+</script>
 
 
 </head>
@@ -91,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="navbar-brand-container">       
     <a href="#"><img src="images/Spotify_Primary_logo_RGB_Green.png" alt="" class="navbar-logo d-inline-block"></a>
       <div class="navbar-title">
-        <div class="navbar-title-text"><a href="#">Today’s Music</a></div>
+        <div class="navbar-title-text"><a href="#">Tom’s Playlist</a></div>
         
         
       </div>
@@ -106,75 +145,1213 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
 <!-- main -->
 
-<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
-<div class="bslib-grid" data-width="35%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="bslib-grid" data-width="50%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<p>Tom Tash</p>
+<div class="cell-output-display html-fill-item html-fill-container">
+<div id="kmyqmhoqmz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
+<style>#kmyqmhoqmz table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#kmyqmhoqmz thead, #kmyqmhoqmz tbody, #kmyqmhoqmz tfoot, #kmyqmhoqmz tr, #kmyqmhoqmz td, #kmyqmhoqmz th {
+  border-style: none;
+}
+
+#kmyqmhoqmz p {
+  margin: 0;
+  padding: 0;
+}
+
+#kmyqmhoqmz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #000000;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#kmyqmhoqmz .gt_title {
+  color: #FFFFFF;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #000000;
+  border-bottom-width: 0;
+}
+
+#kmyqmhoqmz .gt_subtitle {
+  color: #FFFFFF;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #000000;
+  border-top-width: 0;
+}
+
+#kmyqmhoqmz .gt_heading {
+  background-color: #000000;
+  text-align: center;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#kmyqmhoqmz .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#kmyqmhoqmz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#kmyqmhoqmz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#kmyqmhoqmz .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#kmyqmhoqmz .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#kmyqmhoqmz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#kmyqmhoqmz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#kmyqmhoqmz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#kmyqmhoqmz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#kmyqmhoqmz .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#kmyqmhoqmz .gt_stub {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kmyqmhoqmz .gt_stub_row_group {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#kmyqmhoqmz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#kmyqmhoqmz .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#kmyqmhoqmz .gt_summary_row {
+  color: #FFFFFF;
+  background-color: #000000;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kmyqmhoqmz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#kmyqmhoqmz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_grand_summary_row {
+  color: #FFFFFF;
+  background-color: #000000;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kmyqmhoqmz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#kmyqmhoqmz .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_footnotes {
+  color: #FFFFFF;
+  background-color: #000000;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kmyqmhoqmz .gt_sourcenotes {
+  color: #FFFFFF;
+  background-color: #000000;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kmyqmhoqmz .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kmyqmhoqmz .gt_left {
+  text-align: left;
+}
+
+#kmyqmhoqmz .gt_center {
+  text-align: center;
+}
+
+#kmyqmhoqmz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#kmyqmhoqmz .gt_font_normal {
+  font-weight: normal;
+}
+
+#kmyqmhoqmz .gt_font_bold {
+  font-weight: bold;
+}
+
+#kmyqmhoqmz .gt_font_italic {
+  font-style: italic;
+}
+
+#kmyqmhoqmz .gt_super {
+  font-size: 65%;
+}
+
+#kmyqmhoqmz .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#kmyqmhoqmz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#kmyqmhoqmz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#kmyqmhoqmz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#kmyqmhoqmz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#kmyqmhoqmz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#kmyqmhoqmz .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#kmyqmhoqmz .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#kmyqmhoqmz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="album_art"><span data-qmd-base64="PHN0cm9uZz5Tb25nPC9zdHJvbmc+"><span class="gt_from_md"><strong>Song</strong></span></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="song_name"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="artist_name"><span data-qmd-base64="PHN0cm9uZz5BcnRpc3Q8L3N0cm9uZz4="><span class="gt_from_md"><strong>Artist</strong></span></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="track_duration"><span data-qmd-base64="PHN0cm9uZz5EdXJhdGlvbjwvc3Ryb25nPg=="><span class="gt_from_md"><strong>Duration</strong></span></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="popularity"><span data-qmd-base64="PHN0cm9uZz5Qb3B1bGFyaXR5PC9zdHJvbmc+"><span class="gt_from_md"><strong>Popularity</strong></span></span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="explicit"><span data-qmd-base64="PHN0cm9uZz5SYXRlZDwvc3Ryb25nPg=="><span class="gt_from_md"><strong>Rated</strong></span></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="album_type"><span data-qmd-base64="PHN0cm9uZz5SZWxlYXNlPC9zdHJvbmc+"><span class="gt_from_md"><strong>Release</strong></span></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="genres">genres</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273637dc5bb2aec190e012230a6" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Never Forgettin’</td>
+<td headers="artist_name" class="gt_row gt_left">Meechy Darko</td>
+<td headers="track_duration" class="gt_row gt_right">3:17</td>
+<td headers="popularity" class="gt_row gt_right">27</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273637dc5bb2aec190e012230a6" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">CURSED [Feat. Kirk Knight, VITA]</td>
+<td headers="artist_name" class="gt_row gt_left">Meechy Darko</td>
+<td headers="track_duration" class="gt_row gt_right">4:22</td>
+<td headers="popularity" class="gt_row gt_right">29</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273637dc5bb2aec190e012230a6" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Get Lit Or Die Tryin’</td>
+<td headers="artist_name" class="gt_row gt_left">Meechy Darko</td>
+<td headers="track_duration" class="gt_row gt_right">3:32</td>
+<td headers="popularity" class="gt_row gt_right">32</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273637dc5bb2aec190e012230a6" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">PRADA U</td>
+<td headers="artist_name" class="gt_row gt_left">Meechy Darko</td>
+<td headers="track_duration" class="gt_row gt_right">2:33</td>
+<td headers="popularity" class="gt_row gt_right">40</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273ee1210b94d270037cdefdf63" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Self Made</td>
+<td headers="artist_name" class="gt_row gt_left">Erick the Architect</td>
+<td headers="track_duration" class="gt_row gt_right">3:28</td>
+<td headers="popularity" class="gt_row gt_right">37</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">single</td>
+<td headers="genres" class="gt_row gt_left">underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273637dc5bb2aec190e012230a6" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Lost Souls [Feat. Denzel Curry, Busta Rhymes]</td>
+<td headers="artist_name" class="gt_row gt_left">Meechy Darko</td>
+<td headers="track_duration" class="gt_row gt_right">4:32</td>
+<td headers="popularity" class="gt_row gt_right">27</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273aacc3ddf3bfa01f4bd44cacc" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Wanna Be Loved</td>
+<td headers="artist_name" class="gt_row gt_left">Joey Bada$$</td>
+<td headers="track_duration" class="gt_row gt_right">3:35</td>
+<td headers="popularity" class="gt_row gt_right">45</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273aacc3ddf3bfa01f4bd44cacc" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Head High</td>
+<td headers="artist_name" class="gt_row gt_left">Joey Bada$$</td>
+<td headers="track_duration" class="gt_row gt_right">3:01</td>
+<td headers="popularity" class="gt_row gt_right">54</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">GOODMAN</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">3:29</td>
+<td headers="popularity" class="gt_row gt_right">38</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">NO REPORT CARD</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">2:51</td>
+<td headers="popularity" class="gt_row gt_right">40</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">MESSAGE IN A BOTTLE</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">4:40</td>
+<td headers="popularity" class="gt_row gt_right">37</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">HOLLANDAISE</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">4:19</td>
+<td headers="popularity" class="gt_row gt_right">39</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">GANG'NEM</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">4:10</td>
+<td headers="popularity" class="gt_row gt_right">34</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b27346f9bf1154c7205b0e8b1667" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Hive (feat. Vince Staples &amp; Casey Veggies)</td>
+<td headers="artist_name" class="gt_row gt_left">Earl Sweatshirt</td>
+<td headers="track_duration" class="gt_row gt_right">4:37</td>
+<td headers="popularity" class="gt_row gt_right">54</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">alternative hip hop, drumless hip hop, experimental hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2732fc5548485c214ab53477a96" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Just Another Day</td>
+<td headers="artist_name" class="gt_row gt_left">Dr. Dre</td>
+<td headers="track_duration" class="gt_row gt_right">2:22</td>
+<td headers="popularity" class="gt_row gt_right">45</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">g funk, gangster rap, hip hop, rap, west coast rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b27378de8b28de36a74afc0348b5" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">good kid</td>
+<td headers="artist_name" class="gt_row gt_left">Kendrick Lamar</td>
+<td headers="track_duration" class="gt_row gt_right">3:34</td>
+<td headers="popularity" class="gt_row gt_right">53</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, west coast rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b27399da48a530f6ca2ef86da3cc" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Work Out</td>
+<td headers="artist_name" class="gt_row gt_left">J. Cole</td>
+<td headers="track_duration" class="gt_row gt_right">3:55</td>
+<td headers="popularity" class="gt_row gt_right">79</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, north carolina hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2732ae92030b51fb8135d694af9" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Goldie</td>
+<td headers="artist_name" class="gt_row gt_left">A$AP Rocky</td>
+<td headers="track_duration" class="gt_row gt_right">3:12</td>
+<td headers="popularity" class="gt_row gt_right">62</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">east coast hip hop, hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2734c2ab67f7da8208998f35d51" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Adam and Eve</td>
+<td headers="artist_name" class="gt_row gt_left">Nas</td>
+<td headers="track_duration" class="gt_row gt_right">4:11</td>
+<td headers="popularity" class="gt_row gt_right">48</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, east coast hip hop, gangster rap, hardcore hip hop, hip hop, queens hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273cdb645498cd3d8a2db4d05e1" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">u</td>
+<td headers="artist_name" class="gt_row gt_left">Kendrick Lamar</td>
+<td headers="track_duration" class="gt_row gt_right">4:28</td>
+<td headers="popularity" class="gt_row gt_right">60</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, west coast rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">GOTTA RAP</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">4:04</td>
+<td headers="popularity" class="gt_row gt_right">38</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273935d8d5369bc55e74a39303e" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Life Is Good (feat. Drake)</td>
+<td headers="artist_name" class="gt_row gt_left">Future</td>
+<td headers="track_duration" class="gt_row gt_right">3:58</td>
+<td headers="popularity" class="gt_row gt_right">67</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">atl hip hop, hip hop, rap, southern hip hop, trap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2739b704dd3ccb6eb7083415b41" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Unstoppable</td>
+<td headers="artist_name" class="gt_row gt_left">Jayy Grams</td>
+<td headers="track_duration" class="gt_row gt_right">2:58</td>
+<td headers="popularity" class="gt_row gt_right">39</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">baltimore hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">GOTTA RAP</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">4:04</td>
+<td headers="popularity" class="gt_row gt_right">38</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b27390988beeecde0598e8fe5092" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Speechless</td>
+<td headers="artist_name" class="gt_row gt_left">Nas</td>
+<td headers="track_duration" class="gt_row gt_right">3:07</td>
+<td headers="popularity" class="gt_row gt_right">41</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, east coast hip hop, gangster rap, hardcore hip hop, hip hop, queens hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">GO OFF</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">4:28</td>
+<td headers="popularity" class="gt_row gt_right">35</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">FALLACY</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">3:34</td>
+<td headers="popularity" class="gt_row gt_right">34</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">CHURCH ON THE MOVE</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">2:46</td>
+<td headers="popularity" class="gt_row gt_right">32</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273940300fd91d0e1ca28ad3dcf" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">POSITIVE VIBES ONLY</td>
+<td headers="artist_name" class="gt_row gt_left">Ab-Soul</td>
+<td headers="track_duration" class="gt_row gt_right">3:52</td>
+<td headers="popularity" class="gt_row gt_right">27</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273a65779c8c92dff73f8189800" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Ali Bomaye</td>
+<td headers="artist_name" class="gt_row gt_left">The Game</td>
+<td headers="track_duration" class="gt_row gt_right">6:13</td>
+<td headers="popularity" class="gt_row gt_right">59</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273a65779c8c92dff73f8189800" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Freedom</td>
+<td headers="artist_name" class="gt_row gt_left">The Game</td>
+<td headers="track_duration" class="gt_row gt_right">5:47</td>
+<td headers="popularity" class="gt_row gt_right">26</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273b1d860ab1ba847e778b2796d" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">How We Do</td>
+<td headers="artist_name" class="gt_row gt_left">The Game</td>
+<td headers="track_duration" class="gt_row gt_right">3:56</td>
+<td headers="popularity" class="gt_row gt_right">73</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273b1d860ab1ba847e778b2796d" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Put You On The Game</td>
+<td headers="artist_name" class="gt_row gt_left">The Game</td>
+<td headers="track_duration" class="gt_row gt_right">4:14</td>
+<td headers="popularity" class="gt_row gt_right">52</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273b1d860ab1ba847e778b2796d" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Dreams</td>
+<td headers="artist_name" class="gt_row gt_left">The Game</td>
+<td headers="track_duration" class="gt_row gt_right">4:46</td>
+<td headers="popularity" class="gt_row gt_right">54</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273861ecd2783b33bde98760364" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Nosetalgia</td>
+<td headers="artist_name" class="gt_row gt_left">Pusha T</td>
+<td headers="track_duration" class="gt_row gt_right">3:36</td>
+<td headers="popularity" class="gt_row gt_right">59</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">gangster rap, hip hop, pop rap, rap, southern hip hop, trap, virginia hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273c30d59775ce5ef3f59138f59" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Wow Freestyle (feat. Kendrick Lamar)</td>
+<td headers="artist_name" class="gt_row gt_left">Jay Rock</td>
+<td headers="track_duration" class="gt_row gt_right">2:55</td>
+<td headers="popularity" class="gt_row gt_right">63</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, southern hip hop, trap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273eddb2639b74ac6c202032ebe" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">HiiiPower</td>
+<td headers="artist_name" class="gt_row gt_left">Kendrick Lamar</td>
+<td headers="track_duration" class="gt_row gt_right">4:40</td>
+<td headers="popularity" class="gt_row gt_right">64</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, west coast rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b27357939d973a8579b1ddffe15a" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">UOENO</td>
+<td headers="artist_name" class="gt_row gt_left">Black Hippy</td>
+<td headers="track_duration" class="gt_row gt_right">5:42</td>
+<td headers="popularity" class="gt_row gt_right">48</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">single</td>
+<td headers="genres" class="gt_row gt_left">underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2732ae92030b51fb8135d694af9" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">1Train (feat. Kendrick Lamar, Joey Bada$$, Yelawolf, Danny Brown, Action Bronson &amp; Big K.R.I.T.)</td>
+<td headers="artist_name" class="gt_row gt_left">A$AP Rocky</td>
+<td headers="track_duration" class="gt_row gt_right">6:12</td>
+<td headers="popularity" class="gt_row gt_right">62</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">east coast hip hop, hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2733521c23672c236b864e0433e" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Control (feat. Jay Electronica &amp; Big Sean)</td>
+<td headers="artist_name" class="gt_row gt_left">Black Hippy</td>
+<td headers="track_duration" class="gt_row gt_right">7:30</td>
+<td headers="popularity" class="gt_row gt_right">34</td>
+<td headers="explicit" class="gt_row gt_left">clean</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273a4c35326f6fe6676c10e31ac" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Driving Ms Daisy</td>
+<td headers="artist_name" class="gt_row gt_left">Logic</td>
+<td headers="track_duration" class="gt_row gt_right">4:01</td>
+<td headers="popularity" class="gt_row gt_right">45</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, pop rap, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273f0f7649257d4b99460929ced" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Young Jesus</td>
+<td headers="artist_name" class="gt_row gt_left">Logic</td>
+<td headers="track_duration" class="gt_row gt_right">3:32</td>
+<td headers="popularity" class="gt_row gt_right">50</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, pop rap, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273f0f7649257d4b99460929ced" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Lord Willin'</td>
+<td headers="artist_name" class="gt_row gt_left">Logic</td>
+<td headers="track_duration" class="gt_row gt_right">3:29</td>
+<td headers="popularity" class="gt_row gt_right">49</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, pop rap, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273a4c35326f6fe6676c10e31ac" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Soul Food</td>
+<td headers="artist_name" class="gt_row gt_left">Logic</td>
+<td headers="track_duration" class="gt_row gt_right">4:53</td>
+<td headers="popularity" class="gt_row gt_right">50</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, pop rap, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273f0f7649257d4b99460929ced" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Fade Away</td>
+<td headers="artist_name" class="gt_row gt_left">Logic</td>
+<td headers="track_duration" class="gt_row gt_right">4:47</td>
+<td headers="popularity" class="gt_row gt_right">50</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, pop rap, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2732a1b6193d2f7f69d113a7ed0" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">You Should Know</td>
+<td headers="artist_name" class="gt_row gt_left">Rapsody</td>
+<td headers="track_duration" class="gt_row gt_right">6:17</td>
+<td headers="popularity" class="gt_row gt_right">18</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">alternative r&amp;b, north carolina hip hop, trap queen</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273d0673d1dd6938dad8530823b" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Nobody (feat. Ms. Lauryn Hill)</td>
+<td headers="artist_name" class="gt_row gt_left">Nas</td>
+<td headers="track_duration" class="gt_row gt_right">4:42</td>
+<td headers="popularity" class="gt_row gt_right">48</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, east coast hip hop, gangster rap, hardcore hip hop, hip hop, queens hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2737ca6a6838ade9d646c848003" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Reparations</td>
+<td headers="artist_name" class="gt_row gt_left">Black Vulcanite</td>
+<td headers="track_duration" class="gt_row gt_right">4:17</td>
+<td headers="popularity" class="gt_row gt_right">1</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">namibian pop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273b1ddb9f5f519e0d37bc94a53" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Find a Way</td>
+<td headers="artist_name" class="gt_row gt_left">A Tribe Called Quest</td>
+<td headers="track_duration" class="gt_row gt_right">3:24</td>
+<td headers="popularity" class="gt_row gt_right">33</td>
+<td headers="explicit" class="gt_row gt_left">clean</td>
+<td headers="album_type" class="gt_row gt_left">compilation</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, east coast hip hop, golden age hip hop, hip hop, jazz rap, queens hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b27346f9bf1154c7205b0e8b1667" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Chum</td>
+<td headers="artist_name" class="gt_row gt_left">Earl Sweatshirt</td>
+<td headers="track_duration" class="gt_row gt_right">4:04</td>
+<td headers="popularity" class="gt_row gt_right">57</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">alternative hip hop, drumless hip hop, experimental hip hop, hip hop, rap, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273dd1e5c4720d00722fa0cd3dc" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">The Heart Pt3</td>
+<td headers="artist_name" class="gt_row gt_left">Black Hippy</td>
+<td headers="track_duration" class="gt_row gt_right">4:31</td>
+<td headers="popularity" class="gt_row gt_right">33</td>
+<td headers="explicit" class="gt_row gt_left">clean</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273377a6d2051b23afea65ee41a" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Da Art of Storytellin' (Pt. 2)</td>
+<td headers="artist_name" class="gt_row gt_left">Outkast</td>
+<td headers="track_duration" class="gt_row gt_right">2:52</td>
+<td headers="popularity" class="gt_row gt_right">43</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">atl hip hop, dirty south rap, hip hop, old school atlanta hip hop, rap, southern hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273377a6d2051b23afea65ee41a" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">SpottieOttieDopaliscious</td>
+<td headers="artist_name" class="gt_row gt_left">Outkast</td>
+<td headers="track_duration" class="gt_row gt_right">7:07</td>
+<td headers="popularity" class="gt_row gt_right">56</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">atl hip hop, dirty south rap, hip hop, old school atlanta hip hop, rap, southern hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273377a6d2051b23afea65ee41a" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Liberation (with Cee-Lo)</td>
+<td headers="artist_name" class="gt_row gt_left">Outkast</td>
+<td headers="track_duration" class="gt_row gt_right">8:46</td>
+<td headers="popularity" class="gt_row gt_right">44</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">atl hip hop, dirty south rap, hip hop, old school atlanta hip hop, rap, southern hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273096a5830acc45aff40d48095" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Exhibit C</td>
+<td headers="artist_name" class="gt_row gt_left">Jay Electronica</td>
+<td headers="track_duration" class="gt_row gt_right">5:31</td>
+<td headers="popularity" class="gt_row gt_right">49</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">single</td>
+<td headers="genres" class="gt_row gt_left">alternative hip hop, conscious hip hop, drumless hip hop, hip hop, psychedelic hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273eddb2639b74ac6c202032ebe" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Rigamortus</td>
+<td headers="artist_name" class="gt_row gt_left">Kendrick Lamar</td>
+<td headers="track_duration" class="gt_row gt_right">2:49</td>
+<td headers="popularity" class="gt_row gt_right">61</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, west coast rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273045fc920ecf4f8094888ec26" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">N.Y. State of Mind</td>
+<td headers="artist_name" class="gt_row gt_left">Nas</td>
+<td headers="track_duration" class="gt_row gt_right">4:54</td>
+<td headers="popularity" class="gt_row gt_right">70</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, east coast hip hop, gangster rap, hardcore hip hop, hip hop, queens hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273fc20c5dacda34b8609bcbe78" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Who Wants What (feat. Ab-Soul)</td>
+<td headers="artist_name" class="gt_row gt_left">Russ</td>
+<td headers="track_duration" class="gt_row gt_right">5:23</td>
+<td headers="popularity" class="gt_row gt_right">27</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">single</td>
+<td headers="genres" class="gt_row gt_left">hawaiian hip hop, pop rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273019d21fe4f3ecbc818825c59" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Where I'm From</td>
+<td headers="artist_name" class="gt_row gt_left">JAY-Z</td>
+<td headers="track_duration" class="gt_row gt_right">4:27</td>
+<td headers="popularity" class="gt_row gt_right">43</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">east coast hip hop, gangster rap, hip hop, pop rap, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2736f7e02a599bf17973444fdee" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Johnny P's Caddy</td>
+<td headers="artist_name" class="gt_row gt_left">Benny The Butcher</td>
+<td headers="track_duration" class="gt_row gt_right">3:45</td>
+<td headers="popularity" class="gt_row gt_right">57</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">alternative hip hop, boom bap, buffalo hip hop, hip hop, upstate ny rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273b3ed0d541b9c8508d3b6f729" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Sixteen</td>
+<td headers="artist_name" class="gt_row gt_left">Rick Ross</td>
+<td headers="track_duration" class="gt_row gt_right">8:16</td>
+<td headers="popularity" class="gt_row gt_right">43</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">dirty south rap, gangster rap, hip hop, rap, southern hip hop, trap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273eddb2639b74ac6c202032ebe" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">A.D.H.D</td>
+<td headers="artist_name" class="gt_row gt_left">Kendrick Lamar</td>
+<td headers="track_duration" class="gt_row gt_right">3:36</td>
+<td headers="popularity" class="gt_row gt_right">71</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, west coast rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2739b035b031d9f0a6a75ae464e" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Ignorance Is Bliss</td>
+<td headers="artist_name" class="gt_row gt_left">Kendrick Lamar</td>
+<td headers="track_duration" class="gt_row gt_right">3:30</td>
+<td headers="popularity" class="gt_row gt_right">52</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, west coast rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273377a6d2051b23afea65ee41a" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Aquemini</td>
+<td headers="artist_name" class="gt_row gt_left">Outkast</td>
+<td headers="track_duration" class="gt_row gt_right">5:19</td>
+<td headers="popularity" class="gt_row gt_right">53</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">atl hip hop, dirty south rap, hip hop, old school atlanta hip hop, rap, southern hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2737513c4956ea5552caf02eab6" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">The Story of O.J.</td>
+<td headers="artist_name" class="gt_row gt_left">JAY-Z</td>
+<td headers="track_duration" class="gt_row gt_right">3:52</td>
+<td headers="popularity" class="gt_row gt_right">58</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">east coast hip hop, gangster rap, hip hop, pop rap, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273263555eebbe2b375593aa31e" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">If You Know You Know</td>
+<td headers="artist_name" class="gt_row gt_left">Pusha T</td>
+<td headers="track_duration" class="gt_row gt_right">3:22</td>
+<td headers="popularity" class="gt_row gt_right">52</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">gangster rap, hip hop, pop rap, rap, southern hip hop, trap, virginia hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2732e02117d76426a08ac7c174f" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Count Me Out</td>
+<td headers="artist_name" class="gt_row gt_left">Kendrick Lamar</td>
+<td headers="track_duration" class="gt_row gt_right">4:44</td>
+<td headers="popularity" class="gt_row gt_right">75</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, west coast rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273adfb5909ec66db5fbb4d06c8" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Pound Cake / Paris Morton Music 2</td>
+<td headers="artist_name" class="gt_row gt_left">Drake</td>
+<td headers="track_duration" class="gt_row gt_right">7:14</td>
+<td headers="popularity" class="gt_row gt_right">61</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">canadian hip hop, canadian pop, hip hop, pop rap, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273861ecd2783b33bde98760364" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Numbers On The Boards</td>
+<td headers="artist_name" class="gt_row gt_left">Pusha T</td>
+<td headers="track_duration" class="gt_row gt_right">2:44</td>
+<td headers="popularity" class="gt_row gt_right">47</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">gangster rap, hip hop, pop rap, rap, southern hip hop, trap, virginia hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273a65779c8c92dff73f8189800" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">See No Evil</td>
+<td headers="artist_name" class="gt_row gt_left">The Game</td>
+<td headers="track_duration" class="gt_row gt_right">4:44</td>
+<td headers="popularity" class="gt_row gt_right">40</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">detroit hip hop, gangster rap, hip hop, pop rap, rap, southern hip hop, trap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273cfae92bfa188457b4bee0055" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">27 Summers</td>
+<td headers="artist_name" class="gt_row gt_left">Nas</td>
+<td headers="track_duration" class="gt_row gt_right">1:43</td>
+<td headers="popularity" class="gt_row gt_right">43</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, east coast hip hop, gangster rap, hardcore hip hop, hip hop, queens hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273806c160566580d6335d1f16c" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">infinity (888) - feat. Joey Bada$$</td>
+<td headers="artist_name" class="gt_row gt_left">XXXTENTACION</td>
+<td headers="track_duration" class="gt_row gt_right">2:57</td>
+<td headers="popularity" class="gt_row gt_right">71</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">emo rap, miami hip hop, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2738b20e4631fa15d3953528bbc" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Wants and Needs (feat. Lil Baby)</td>
+<td headers="artist_name" class="gt_row gt_left">Drake</td>
+<td headers="track_duration" class="gt_row gt_right">3:13</td>
+<td headers="popularity" class="gt_row gt_right">73</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">single</td>
+<td headers="genres" class="gt_row gt_left">canadian hip hop, canadian pop, hip hop, pop rap, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2738368e609068e83b4853858ea" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Aquamarine (feat. Michael Kiwanuka)</td>
+<td headers="artist_name" class="gt_row gt_left">Danger Mouse</td>
+<td headers="track_duration" class="gt_row gt_right">3:58</td>
+<td headers="popularity" class="gt_row gt_right">0</td>
+<td headers="explicit" class="gt_row gt_left">clean</td>
+<td headers="album_type" class="gt_row gt_left">single</td>
+<td headers="genres" class="gt_row gt_left">alternative hip hop, mashup</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273cc5c6f9f9d6ca3353dbb6c75" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Mural</td>
+<td headers="artist_name" class="gt_row gt_left">Lupe Fiasco</td>
+<td headers="track_duration" class="gt_row gt_right">8:49</td>
+<td headers="popularity" class="gt_row gt_right">41</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">chicago rap, conscious hip hop, hip hop, political hip hop, pop rap, rap, southern hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273cdb645498cd3d8a2db4d05e1" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">The Blacker The Berry</td>
+<td headers="artist_name" class="gt_row gt_left">Kendrick Lamar</td>
+<td headers="track_duration" class="gt_row gt_right">5:29</td>
+<td headers="popularity" class="gt_row gt_right">61</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap, west coast rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2734af3be606885e7f5559f4031" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">F*ckwithmeyouknowigotit</td>
+<td headers="artist_name" class="gt_row gt_left">JAY-Z</td>
+<td headers="track_duration" class="gt_row gt_right">4:03</td>
+<td headers="popularity" class="gt_row gt_right">48</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">east coast hip hop, gangster rap, hip hop, pop rap, rap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2730806b9b4d7ba20b1406bac89" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Tis The Season (feat. Joey Bada$$)</td>
+<td headers="artist_name" class="gt_row gt_left">Audio Push</td>
+<td headers="track_duration" class="gt_row gt_right">4:23</td>
+<td headers="popularity" class="gt_row gt_right">28</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">single</td>
+<td headers="genres" class="gt_row gt_left">deep underground hip hop, soul flow</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273fbdec8696ff05ae19265dfa0" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Tity and Dolla (feat. Hugh Augustine &amp; Jay Rock)</td>
+<td headers="artist_name" class="gt_row gt_left">Isaiah Rashad</td>
+<td headers="track_duration" class="gt_row gt_right">4:58</td>
+<td headers="popularity" class="gt_row gt_right">50</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">hip hop, rap, tennessee hip hop, underground hip hop</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b27350192d5f728fea13fb3af203" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Blessings</td>
+<td headers="artist_name" class="gt_row gt_left">Big Sean</td>
+<td headers="track_duration" class="gt_row gt_right">4:12</td>
+<td headers="popularity" class="gt_row gt_right">58</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">detroit hip hop, hip hop, pop rap, r&amp;b, rap, southern hip hop, trap</td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b2734cd0e005711f4f9c37cf43ad" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Get Down</td>
+<td headers="artist_name" class="gt_row gt_left">Various Artists</td>
+<td headers="track_duration" class="gt_row gt_right">4:27</td>
+<td headers="popularity" class="gt_row gt_right">10</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">compilation</td>
+<td headers="genres" class="gt_row gt_left"></td></tr>
+    <tr><td headers="album_art" class="gt_row gt_left"><img src="https://i.scdn.co/image/ab67616d0000b273aacc3ddf3bfa01f4bd44cacc" style="height:50px;"></td>
+<td headers="song_name" class="gt_row gt_left">Where I Belong</td>
+<td headers="artist_name" class="gt_row gt_left">Joey Bada$$</td>
+<td headers="track_duration" class="gt_row gt_right">3:08</td>
+<td headers="popularity" class="gt_row gt_right">42</td>
+<td headers="explicit" class="gt_row gt_left">explicit</td>
+<td headers="album_type" class="gt_row gt_left">album</td>
+<td headers="genres" class="gt_row gt_left">conscious hip hop, hip hop, rap</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="8"><span data-qmd-base64="PHN0cm9uZz5Tb3VyY2U6PC9zdHJvbmc+IFtCNEJhcnMgUGxheWxpc3RdICg8YSBocmVmPSJodHRwczovL29wZW4uc3BvdGlmeS5jb20vcGxheWxpc3QvMmxWZkxFWno5TWhXeEdNemdGc2xMaiI+aHR0cHM6Ly9vcGVuLnNwb3RpZnkuY29tL3BsYXlsaXN0LzJsVmZMRVp6OU1oV3hHTXpnRnNsTGo8L2E+KQ=="><span class="gt_from_md"><strong>Source:</strong> [B4Bars Playlist] (<a href="https://open.spotify.com/playlist/2lVfLEZz9MhWxGMzgFslLj">https://open.spotify.com/playlist/2lVfLEZz9MhWxGMzgFslLj</a>)</span></span></td>
+    </tr>
+  </tfoot>
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="8"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> The popularity of a track is a value between 0 and 100, where 100 represents the most popular and 0 represents the least popular. This metric reflects how frequently a track has been played in recent times.</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
     <span class="bslib-full-screen-enter badge rounded-pill">
         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
     </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="bslib-grid" data-height="30%" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()">
 <div class="card-body html-fill-item html-fill-container">
-<div class="cell-output cell-output-stdout html-fill-item html-fill-container">
-<pre><code># A tibble: 6 × 14
-  name      height  mass hair_color skin_color eye_color birth_year sex   gender
-  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
-1 Luke Sky…    172    77 blond      fair       blue            19   male  mascu…
-2 C-3PO        167    75 &lt;NA&gt;       gold       yellow         112   none  mascu…
-3 R2-D2         96    32 &lt;NA&gt;       white, bl… red             33   none  mascu…
-4 Darth Va…    202   136 none       white      yellow          41.9 male  mascu…
-5 Leia Org…    150    49 brown      light      brown           19   fema… femin…
-6 Owen Lars    178   120 brown, gr… light      blue            52   male  mascu…
-# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
-#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb1" data-startfrom="194" data-source-offset="-16"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 193;"><span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>rap_hits <span class="op">=</span> <span class="fu">transpose</span>(rap_ojs)</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="co">// create dropdown menu</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>viewof songDropdown <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>  rap_hits<span class="op">.</span><span class="fu">map</span>(d<span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">song_name</span>)<span class="op">,</span></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Choose a Song"</span><span class="op">,</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>  <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="co">// Function to get the corresponding song_id for the selected song_name</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">getSongId</span>(songName) {</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> selectedSong <span class="op">=</span> rap_hits<span class="op">.</span><span class="fu">find</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">song_name</span> <span class="op">===</span> songName)<span class="op">;</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> selectedSong <span class="op">?</span> selectedSong<span class="op">.</span><span class="at">song_id</span> <span class="op">:</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="co">// Embed the iframe based on the selected song</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;div&gt;</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;iframe</span></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="vs">    style="border-radius:12px"</span></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="vs">    src="https://open.spotify.com/embed/track/</span><span class="sc">${</span><span class="fu">getSongId</span>(songDropdown)<span class="sc">}</span><span class="vs">?utm_source=generator"</span></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="vs">    width="100%"</span></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="vs">    height="352"</span></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="vs">    frameBorder="0"</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="vs">    allowfullscreen=""</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="vs">    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"</span></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="vs">    loading="lazy"&gt;&lt;/iframe&gt;</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-1-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
 </div>
 </div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
-<div class="bslib-grid" data-width="65%" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body flow">
-Wellard
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-1-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
 </div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="bslib-grid" data-height="10%" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body flow">
-Nangosyah
 </div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div><div class="bslib-grid" data-height="70%" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body flow">
-Wamaleero
 </div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div><div class="bslib-grid" data-height="20%" style="display: grid; grid-template-rows: ; grid-auto-columns: minmax(0, 1fr);">
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-1-3" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-1-4" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 
 
 <div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden">
@@ -185,6 +1362,17 @@ Wamaleero
 </div>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuLy8gaW1wb3J0IGRhdGFcbnJhcF9oaXRzID0gdHJhbnNwb3NlKHJhcF9vanMpXG5cbi8vIGNyZWF0ZSBkcm9wZG93biBtZW51XG52aWV3b2Ygc29uZ0Ryb3Bkb3duID0gSW5wdXRzLnNlbGVjdChcbiAgcmFwX2hpdHMubWFwKGQ9PiBkLnNvbmdfbmFtZSksXG4gIHtcbiAgbGFiZWw6IFwiQ2hvb3NlIGEgU29uZ1wiLFxuICB1bmlxdWU6IHRydWVcbiAgfVxuKVxuXG4vLyBGdW5jdGlvbiB0byBnZXQgdGhlIGNvcnJlc3BvbmRpbmcgc29uZ19pZCBmb3IgdGhlIHNlbGVjdGVkIHNvbmdfbmFtZVxuZnVuY3Rpb24gZ2V0U29uZ0lkKHNvbmdOYW1lKSB7XG4gIGNvbnN0IHNlbGVjdGVkU29uZyA9IHJhcF9oaXRzLmZpbmQoZCA9PiBkLnNvbmdfbmFtZSA9PT0gc29uZ05hbWUpO1xuICByZXR1cm4gc2VsZWN0ZWRTb25nID8gc2VsZWN0ZWRTb25nLnNvbmdfaWQgOiBudWxsO1xufVxuXG4vLyBFbWJlZCB0aGUgaWZyYW1lIGJhc2VkIG9uIHRoZSBzZWxlY3RlZCBzb25nXG5odG1sYDxkaXY+XG4gIDxpZnJhbWVcbiAgICBzdHlsZT1cImJvcmRlci1yYWRpdXM6MTJweFwiXG4gICAgc3JjPVwiaHR0cHM6Ly9vcGVuLnNwb3RpZnkuY29tL2VtYmVkL3RyYWNrLyR7Z2V0U29uZ0lkKHNvbmdEcm9wZG93bil9P3V0bV9zb3VyY2U9Z2VuZXJhdG9yXCJcbiAgICB3aWR0aD1cIjEwMCVcIlxuICAgIGhlaWdodD1cIjM1MlwiXG4gICAgZnJhbWVCb3JkZXI9XCIwXCJcbiAgICBhbGxvd2Z1bGxzY3JlZW49XCJcIlxuICAgIGFsbG93PVwiYXV0b3BsYXk7IGNsaXBib2FyZC13cml0ZTsgZW5jcnlwdGVkLW1lZGlhOyBmdWxsc2NyZWVuOyBwaWN0dXJlLWluLXBpY3R1cmVcIlxuICAgIGxvYWRpbmc9XCJsYXp5XCI+PC9pZnJhbWU+XG48L2Rpdj5gXG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnc29uZ0Ryb3Bkb3duJykifV19
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
