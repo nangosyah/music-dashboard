@@ -2,9 +2,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2",
+    "text": "👋 Hi, I’m naam is Tom\nI’m passionate about data-driven impact, with experience in research, project management, and client relations across agriculture, renewable energy, and micro-finance.\nI enjoy translating ideas into action, delivering meaningful end-to-end programs, solving complex challenges with cross-functional teams, fostering collaboration through engaging meetings, and building shared value relationships with communities, partners, and donors/investors.\nOutside of work, I enjoy music, football, Formula One, and a lot of other sports.\nAt the moment, I am exploring roles that focus on:\n\nHealth Sciences: research, data analytics, bioinformatics\nProject Delivery: within development sectors\nInnovation: pilots, initiatives, processes\nStrategy & Transformation\nData Management\n\nI am also open to interesting conversations about where I can add value!\n\nConnect with Me:\n\nLinkedIn\nGitHub",
     "crumbs": [
       "About"
     ]
@@ -12,9 +12,19 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "music-dashboard",
+    "title": "Tom’s Playlist",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2",
+    "text": "Explore my curated playlist !\n\n\n\nSelect a Song: Choose from my favorite rap hits.\nListen: Play tracks directly from the dashboard.\n\n\n\n\nCreated by Tom Nangosyah based on a tutorial by Melissa Van Bussel for POSIT’s 2024 Table Contest.\n\n\n\nSelect a song from my playlist to enjoy!",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome-to-my-music-dashboard",
+    "href": "index.html#welcome-to-my-music-dashboard",
+    "title": "Tom’s Playlist",
+    "section": "",
+    "text": "Explore my curated playlist !\n\n\n\nSelect a Song: Choose from my favorite rap hits.\nListen: Play tracks directly from the dashboard.\n\n\n\n\nCreated by Tom Nangosyah based on a tutorial by Melissa Van Bussel for POSIT’s 2024 Table Contest.\n\n\n\nSelect a song from my playlist to enjoy!",
     "crumbs": [
       "Home"
     ]
