@@ -87,6 +87,8 @@ for (i in 1:82) {
     req_perform() |>
     resp_body_json()
   
+  Sys.sleep(1)
+  
   # tempo for each section
   B4Bars_Analysis[[i]] <- unlist(lapply(audio_analysis$sections, function(x) x$tempo))
 }
