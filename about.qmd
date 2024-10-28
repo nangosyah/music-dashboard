@@ -1,9 +1,48 @@
 ---
-title: "About"
+title: "About Me"
+toc: false
 ---
 
-About this site
+::::: {.columns}
 
-```{r}
-1 + 1
-```
+:::: {.column width="35%"}
+
+<img src="images/tompasport.jpg" style="width: 25vw; border-radius: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+::::
+
+:::: {.column width="5%"}
+
+::::
+
+:::: {.column width="60%"}
+
+<big>
+
+# 👋 Hi, I'm naam is Tom
+
+I'm passionate about data-driven impact, with experience in research, project management, and client relations across agriculture, renewable energy, and micro-finance.
+
+I enjoy translating ideas into action, delivering meaningful end-to-end programs, solving complex challenges with cross-functional teams, fostering collaboration through engaging meetings, and building shared value relationships with communities, partners, and donors/investors.
+
+Outside of work, I enjoy music, football, Formula One, and a lot of other sports.
+
+At the moment, I am exploring roles that focus on:
+
+- **Health Sciences:** research, data analytics, bioinformatics
+- **Project Delivery:** within development sectors
+- **Innovation:** pilots, initiatives, processes
+- **Strategy & Transformation**
+- **Data Management**
+
+I am also open to interesting conversations about where I can add value!
+
+### Connect with Me:
+- [LinkedIn](https://www.linkedin.com/in/tom-wellard-nangosyah-044435a1/)
+- [GitHub](https://github.com/nangosyah)
+
+</big>
+
+::::
+
+:::::

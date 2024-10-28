@@ -1,5 +1,5 @@
 ---
-title: "Today's Music"
+title: "Tom's Playlist"
 format: 
   dashboard: 
     logo: "images/Spotify_Primary_logo_RGB_Green.png"
@@ -177,8 +177,9 @@ gt_table <- B4Bars |>
 gt_table
 ```
 
+## Column {width="65%"}
 
-### Row {height="30%"}
+### Row {height="10%"}
 
 ```{r, sendtoojs}
 #| echo: false
@@ -186,6 +187,7 @@ gt_table
 ojs_define(rap_ojs = B4Bars)
 ```
 
+### Row {height="70%"}
 
 ```{ojs}
 //| expandable: false
@@ -220,8 +222,18 @@ html`<div>
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
     loading="lazy"></iframe>
 </div>`
-
 ```
 
 
+### Row {height="20%"}
+
+:::{.card expandable="false"}
+<div style="background-color: #7D3C98; color: white; border-radius: 10px; padding: 10px; text-align: center; display: flex; align-items: center; justify-content: center; height: 100%;">
+
+  <span style="font-size: 1vw; width: 100%;">
+    This dashboard was created by **Tom Nangosyah** based on a tutorial by **Melissa Van Bussel** for her submission to [POSIT's 2024 Table Contest](https://posit.co/blog/announcing-the-2024-table-contest/).<br> You can find a tutorial for this dashboard [here](https://melissavanbussel.github.io/spotify-dashboard).
+  </span>
+
+</div>
+:::
 
