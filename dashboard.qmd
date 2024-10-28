@@ -99,6 +99,7 @@ B4Bars$genres <- unlist(lapply(response$tracks, FUN = function(x) {
 ```
 
 
+
 ```{r extractAudioAnalysis}
 # # curl_translate("curl --request GET \
 # #   --url https://api.spotify.com/v1/audio-analysis/11dFghVXANMlKmJXsNCbNl \
