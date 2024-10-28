@@ -47,7 +47,7 @@ spotify_access_token <- response$access_token
 #   --url https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj \
 #   --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'")
 
-tth <- request("https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj") |> 
+playlist <- request("https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj") |> 
   req_method("GET") |> 
   req_headers(
     Authorization = paste0("Bearer ", spotify_access_token)) |> 
@@ -59,56 +59,84 @@ tth <- request("https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj") |>
 
 ```{r extractsongs}
 B4Bars <- data.frame(
-  song_name = unlist(lapply(tth$tracks$items, FUN = function(x) {x$track$name})),
-  song_id = unlist(lapply(tth$tracks$items, FUN = function(x) {x$track$id})),
-  artist_name = unlist(lapply(tth$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
-  album_art = unlist(lapply(tth$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
-  track_duration = unlist(lapply(tth$tracks$items, FUN = function(item) {item$track$duration_ms})),
-  popularity = unlist(lapply(tth$tracks$items, FUN = function(item) {item$track$popularity})),
- explicit = unlist(lapply(tth$tracks$items, FUN = function(item) {item$track$explicit})))
+  song_name = unlist(lapply(playlist$tracks$items, FUN = function(x) {x$track$name})),
+  song_id = unlist(lapply(playlist$tracks$items, FUN = function(x) {x$track$id})),
+  artist_name = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
+  album_art = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
+  track_duration = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$duration_ms})),
+  popularity = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$popularity})),
+  explicit = unlist(lapply(playlist$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
+)
 ```
 
+
+
+```{r additionalfeatures}
+song_ids <- B4Bars$song_id
+
+# several tracks
+url <- paste0("https://api.spotify.com/v1/tracks?ids=", paste(song_ids, collapse = ","))
+
+# fetch track details
+response <- request(url) |> 
+  req_method("GET") |> 
+  req_headers(Authorization = paste0("Bearer ", spotify_access_token)) |> 
+  req_perform() |> 
+  resp_body_json()
+
+# additional features
+B4Bars$release_date <- unlist(lapply(response$tracks, FUN = function(x) {x$album$release_date}))
+B4Bars$album_type <- unlist(lapply(response$tracks, FUN = function(x) {x$album$album_type}))
+B4Bars$genres <- unlist(lapply(response$tracks, FUN = function(x) {
+  artist_id <- x$album$artists[[1]]$id
+  artist_response <- request(paste0("https://api.spotify.com/v1/artists/", artist_id)) |> 
+    req_method("GET") |> 
+    req_headers(Authorization = paste0("Bearer ", spotify_access_token)) |> 
+    req_perform() |> 
+    resp_body_json()
+  paste(artist_response$genres, collapse = ", ")
+}))
+```
 
 
 ```{r extractAudioAnalysis}
-# curl_translate("curl --request GET \
-#   --url https://api.spotify.com/v1/audio-analysis/11dFghVXANMlKmJXsNCbNl \
-#   --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'")
-
-B4Bars_Analysis <- vector(mode = "list", length = 82)
-
-for (i in 1:82) {
-  audio_analysis_url <- paste0("https://api.spotify.com/v1/audio-analysis/", B4Bars$song_id[i])
-  audio_analysis <- request(audio_analysis_url) |>
-    req_method("GET") |>
-    req_headers(
-      Authorization = paste0("Bearer ", spotify_access_token)
-    ) |>
-    req_perform() |>
-    resp_body_json()
-  
-  Sys.sleep(1)
-  
-  # tempo for each section
-  B4Bars_Analysis[[i]] <- unlist(lapply(audio_analysis$sections, function(x) x$tempo))
-}
-
-# add tempo to B4Bars
-B4Bars$tempo <- I(B4Bars_Analysis)
+# # curl_translate("curl --request GET \
+# #   --url https://api.spotify.com/v1/audio-analysis/11dFghVXANMlKmJXsNCbNl \
+# #   --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'")
+# 
+# B4Bars_Analysis <- vector(mode = "list", length = 82)
+# for (i in 1:82) {
+#   audio_analysis <- request(paste0("https://api.spotify.com/v1/audio-analysis/", B4Bars$song_id[i])) |>
+#   req_method("GET") |>
+#   req_headers(
+#       Authorization = paste0("Bearer ", spotify_access_token)
+#     ) |>
+#     req_perform() |>
+#     resp_body_json()
+#   
+#   # tempo for each section
+#   B4Bars_Analysis[[i]] <- unlist(lapply(audio_analysis$sections, FUN = function(x) {x$tempo }))
+# }
+# 
+# # add tempo to B4Bars
+# B4Bars$tempo <- I(B4Bars_Analysis)
 ```
+
 
 
 ```{r createtable}
 # gt table
 gt_table <- B4Bars |> 
-  select(album_art, song_name, artist_name, track_duration, popularity, tempo) |> 
+  select(album_art, song_name, artist_name, track_duration, popularity, explicit, album_type, genres) |> 
   gt() |> 
   cols_label( 
     album_art = md("**Song**"), 
     song_name = "", 
     artist_name = md("**Artist**"), 
     track_duration = md("**Duration**"), 
-    popularity = md("**Popularity**") 
+    popularity = md("**Popularity**"),
+    album_type = md("**Release**"),
+    explicit = md("**Rated**")
   ) |> 
   text_transform( 
     locations = cells_body(columns = album_art),
@@ -122,18 +150,18 @@ gt_table <- B4Bars |>
       sprintf("%d:%02d", minutes, seconds) 
     } 
   ) |> 
-  cols_nanoplot(
-    columns = tempo,
-    plot_type = "line",
-    new_col_name = "tempos",
-    new_col_label = md("**Tempo**"),
-    options = nanoplot_options(
-      data_point_fill_color = "lightgreen",
-      data_point_stroke_color = "lightgreen",
-      data_area_fill_color = "lightgreen",
-      data_line_stroke_color = "purple"
-    )
-  ) |> 
+  # cols_nanoplot(
+  #   columns = tempo,
+  #   plot_type = "line",
+  #   new_col_name = "tempos",
+  #   new_col_label = md("**Tempo**"),
+  #   options = nanoplot_options(
+  #     data_point_fill_color = "lightgreen",
+  #     data_point_stroke_color = "lightgreen",
+  #     data_area_fill_color = "lightgreen",
+  #     data_line_stroke_color = "purple"
+  #   )
+  # ) |> 
   tab_options(
     table.font.color = "white",
     table.background.color = "black"
@@ -142,16 +170,11 @@ gt_table <- B4Bars |>
     footnote = "The popularity of a track is a value between 0 and 100, where 100 represents the most popular and 0 represents the least popular. This metric reflects how frequently a track has been played in recent times.",
     locations = cells_column_labels(columns = popularity)
   ) |> 
-  tab_footnote(
-    footnote = "The tempo is measured in beats per minute (BPM) and indicates the speed at which the music is played. We illustrate how the tempo varies across different sections of a given song.",
-    locations = cells_column_labels(columns = tempo)
-  ) |> 
   tab_source_note(
     source_note = md("**Source:** [B4Bars Playlist] (https://open.spotify.com/playlist/2lVfLEZz9MhWxGMzgFslLj)")
   )
 
 gt_table
-
 ```
 
 
@@ -174,41 +197,31 @@ rap_hits = transpose(rap_ojs)
 viewof songDropdown = Inputs.select(
   rap_hits.map(d=> d.song_name),
   {
-  label: "choose a song",
+  label: "Choose a Song",
   unique: true
   }
 )
 
+// Function to get the corresponding song_id for the selected song_name
+function getSongId(songName) {
+  const selectedSong = rap_hits.find(d => d.song_name === songName);
+  return selectedSong ? selectedSong.song_id : null;
+}
 
-// Create a reactive variable to hold the selected song
-selectedSong = songDropdown;
-
-// Get the corresponding Spotify ID for the selected song
-selectedSpotifyId = rap_hits.find(d => d.song_name === selectedSong).spotify_id;
-
-// Create the iframe with the selected Spotify track
-html`<iframe
-    style="border-radius: 12px"
-    src="https://open.spotify.com/embed/track/${selectedSpotifyId}?utm_source=generator"
+// Embed the iframe based on the selected song
+html`<div>
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/track/${getSongId(songDropdown)}?utm_source=generator"
     width="100%"
     height="352"
     frameBorder="0"
-    allowfullscreen
+    allowfullscreen=""
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy">
-</iframe>`;
+    loading="lazy"></iframe>
+</div>`
+
 ```
 
-
-<iframe 
-    style="border-radius: 12px" 
-    src="https://open.spotify.com/embed/track/0UwtT6ePrSWejSJeJ0wxWU?utm_source=generator" 
-    width="100%" 
-    height="352" 
-    frameBorder="0" 
-    allowfullscreen 
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-    loading="lazy">
-</iframe>
 
 
