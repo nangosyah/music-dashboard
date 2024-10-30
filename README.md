@@ -1,8 +1,8 @@
 # Music Dashboard
 
-Welcome to the Music Dashboard, a project created by Tom Nangosyah! 
+Welcome to the Music Dashboard! 
 
-This interactive dashboard allows you to explore and listen to a curated playlist of rap hits.
+This interactive dashboard allows you to explore and listen to my curated playlist of rap music.
 
 ## Features
 
