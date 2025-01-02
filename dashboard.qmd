@@ -47,7 +47,37 @@ spotify_access_token <- response$access_token
 #   --url https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj \
 #   --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'")
 
-playlist <- request("https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj") |> 
+playlist <- request("https://api.spotify.com/v1/playlists/48odFcjpfAk4ZGC9Arj6p7") |> 
+  req_method("GET") |> 
+  req_headers(
+    Authorization = paste0("Bearer ", spotify_access_token)) |> 
+  req_perform() |>
+  resp_body_json()
+```
+
+
+```{r getHOMEURBANplaylist}
+playlist1 <- request("https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj") |> 
+  req_method("GET") |> 
+  req_headers(
+    Authorization = paste0("Bearer ", spotify_access_token)) |> 
+  req_perform() |>
+  resp_body_json()
+```
+
+
+```{r getJUSTVIBINplaylist}
+playlist2 <- request("https://api.spotify.com/v1/playlists/7CfKg9izzVp9BkFWuQIbQ6") |> 
+  req_method("GET") |> 
+  req_headers(
+    Authorization = paste0("Bearer ", spotify_access_token)) |> 
+  req_perform() |>
+  resp_body_json()
+```
+
+
+```{r getPRIVATESCHOOLVOL1playlist}
+playlist3 <- request("https://api.spotify.com/v1/playlists/5zkGkYCwKGHnRfkpPRRo3J") |> 
   req_method("GET") |> 
   req_headers(
     Authorization = paste0("Bearer ", spotify_access_token)) |> 
@@ -58,6 +88,7 @@ playlist <- request("https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj
 
 
 ```{r extractsongs}
+
 B4Bars <- data.frame(
   song_name = unlist(lapply(playlist$tracks$items, FUN = function(x) {x$track$name})),
   song_id = unlist(lapply(playlist$tracks$items, FUN = function(x) {x$track$id})),
@@ -67,12 +98,43 @@ B4Bars <- data.frame(
   popularity = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$popularity})),
   explicit = unlist(lapply(playlist$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
 )
+
+HomeUrban <- data.frame(
+  song_name = unlist(lapply(playlist1$tracks$items, FUN = function(x) {x$track$name})),
+  song_id = unlist(lapply(playlist1$tracks$items, FUN = function(x) {x$track$id})),
+  artist_name = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
+  album_art = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
+  track_duration = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$duration_ms})),
+  popularity = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$popularity})),
+  explicit = unlist(lapply(playlist1$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
+)
+
+Justvibin <- data.frame(
+  song_name = unlist(lapply(playlist2$tracks$items, FUN = function(x) {x$track$name})),
+  song_id = unlist(lapply(playlist2$tracks$items, FUN = function(x) {x$track$id})),
+  artist_name = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
+  album_art = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
+  track_duration = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$duration_ms})),
+  popularity = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$popularity})),
+  explicit = unlist(lapply(playlist2$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
+)
+
+
+Pschoolvo1 <- data.frame(
+  song_name = unlist(lapply(playlist3$tracks$items, FUN = function(x) {x$track$name})),
+  song_id = unlist(lapply(playlist3$tracks$items, FUN = function(x) {x$track$id})),
+  artist_name = unlist(lapply(playlist3$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
+  album_art = unlist(lapply(playlist3$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
+  track_duration = unlist(lapply(playlist3$tracks$items, FUN = function(item) {item$track$duration_ms})),
+  popularity = unlist(lapply(playlist3$tracks$items, FUN = function(item) {item$track$popularity})),
+  explicit = unlist(lapply(playlist3$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
+)
 ```
 
 
 
 ```{r additionalfeatures}
-song_ids <- B4Bars$song_id
+song_ids <- Pschoolvo1$song_id
 
 # several tracks
 url <- paste0("https://api.spotify.com/v1/tracks?ids=", paste(song_ids, collapse = ","))
@@ -85,9 +147,9 @@ response <- request(url) |>
   resp_body_json()
 
 # additional features
-B4Bars$release_date <- unlist(lapply(response$tracks, FUN = function(x) {x$album$release_date}))
-B4Bars$album_type <- unlist(lapply(response$tracks, FUN = function(x) {x$album$album_type}))
-B4Bars$genres <- unlist(lapply(response$tracks, FUN = function(x) {
+Pschoolvo1$release_date <- unlist(lapply(response$tracks, FUN = function(x) {x$album$release_date}))
+Pschoolvo1$album_type <- unlist(lapply(response$tracks, FUN = function(x) {x$album$album_type}))
+Pschoolvo1$genres <- unlist(lapply(response$tracks, FUN = function(x) {
   artist_id <- x$album$artists[[1]]$id
   artist_response <- request(paste0("https://api.spotify.com/v1/artists/", artist_id)) |> 
     req_method("GET") |> 
@@ -97,7 +159,6 @@ B4Bars$genres <- unlist(lapply(response$tracks, FUN = function(x) {
   paste(artist_response$genres, collapse = ", ")
 }))
 ```
-
 
 
 ```{r extractAudioAnalysis}
@@ -125,9 +186,9 @@ B4Bars$genres <- unlist(lapply(response$tracks, FUN = function(x) {
 
 
 
-```{r createtable}
+```{r table1}
 # gt table
-gt_table <- B4Bars |> 
+gt_table <- Pschoolvo1 |> 
   select(album_art, song_name, artist_name, track_duration, popularity, explicit, album_type, genres) |> 
   gt() |> 
   cols_label( 
@@ -172,20 +233,23 @@ gt_table <- B4Bars |>
     locations = cells_column_labels(columns = popularity)
   ) |> 
   tab_source_note(
-    source_note = md("**Source:** [B4Bars Playlist] (https://open.spotify.com/playlist/2lVfLEZz9MhWxGMzgFslLj)")
+    source_note = md("**Source:** [Urban Home] (https://api.spotify.com/v1/playlists/48odFcjpfAk4ZGC9Arj6p7)")
   )
 
 gt_table
 ```
 
-## Column {width="65%"}
+
+
+
+## Column {width="60%"}
 
 ### Row {height="10%"}
 
-```{r, sendtoojs}
+```{r, sendtoojs1}
 #| echo: false
 #| include: false
-ojs_define(rap_ojs = B4Bars)
+ojs_define(rap_ojs = Pschoolvo1)
 ```
 
 ### Row {height="70%"}
@@ -232,7 +296,7 @@ html`<div>
 <div style="background-color: #7D3C98; color: white; border-radius: 10px; padding: 10px; text-align: center; display: flex; align-items: center; justify-content: center; height: 100%;">
 
   <span style="font-size: 1vw; width: 100%;">
-    This dashboard was created by **Tom Nangosyah** based on a tutorial by **Melissa Van Bussel** for her submission to [POSIT's 2024 Table Contest](https://posit.co/blog/announcing-the-2024-table-contest/).<br> You can find a tutorial for this dashboard [here](https://melissavanbussel.github.io/spotify-dashboard).
+    This dashboard was created by **Tom Nangosyah** based on a tutorial by **Melissa Van Bussel**<br> You can also implement this dashboard using this  [repo](https://melissavanbussel.github.io/spotify-dashboard).
   </span>
 
 </div>
