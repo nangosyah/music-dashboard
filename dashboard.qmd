@@ -27,10 +27,8 @@ response <- request("https://accounts.spotify.com/api/token") |>
   req_method("POST") |>
   req_body_raw(
     paste0(
-      "grant_type=client_credentials&client_id=",
-      client_id,
-      "&client_secret=",
-      client_secret
+      "grant_type=client_credentials&client_id=",client_id,
+      "&client_secret=",client_secret
     ),
     type = "application/x-www-form-urlencoded"
   ) |>
@@ -39,7 +37,6 @@ response <- request("https://accounts.spotify.com/api/token") |>
 
 spotify_access_token <- response$access_token
 ```
-
 
 
 ```{r getB4BARSplaylist}
@@ -238,8 +235,6 @@ gt_table <- Pschoolvo1 |>
 
 gt_table
 ```
-
-
 
 
 ## Column {width="60%"}
