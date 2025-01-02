@@ -231,7 +231,7 @@ gt_table <- Pschoolvo1 |>
     locations = cells_column_labels(columns = popularity)
   ) |> 
   tab_source_note(
-    source_note = md("**Source:** [Urban Home] (https://api.spotify.com/v1/playlists/48odFcjpfAk4ZGC9Arj6p7)")
+    source_note = md("**Source:** [Piano] (https://api.spotify.com/v1/playlists/48odFcjpfAk4ZGC9Arj6p7)")
   )
 
 gt_table
