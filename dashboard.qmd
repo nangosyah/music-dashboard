@@ -47,32 +47,32 @@ spotify_access_token <- response$access_token
 #   --url https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj \
 #   --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'")
 
-playlist <- request("https://api.spotify.com/v1/playlists/48odFcjpfAk4ZGC9Arj6p7") |> 
-  req_method("GET") |> 
-  req_headers(
-    Authorization = paste0("Bearer ", spotify_access_token)) |> 
-  req_perform() |>
-  resp_body_json()
+# playlist <- request("https://api.spotify.com/v1/playlists/48odFcjpfAk4ZGC9Arj6p7") |> 
+#   req_method("GET") |> 
+#   req_headers(
+#     Authorization = paste0("Bearer ", spotify_access_token)) |> 
+#   req_perform() |>
+#   resp_body_json()
 ```
 
 
 ```{r getHOMEURBANplaylist}
-playlist1 <- request("https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj") |> 
-  req_method("GET") |> 
-  req_headers(
-    Authorization = paste0("Bearer ", spotify_access_token)) |> 
-  req_perform() |>
-  resp_body_json()
+# playlist1 <- request("https://api.spotify.com/v1/playlists/2lVfLEZz9MhWxGMzgFslLj") |> 
+#   req_method("GET") |> 
+#   req_headers(
+#     Authorization = paste0("Bearer ", spotify_access_token)) |> 
+#   req_perform() |>
+#   resp_body_json()
 ```
 
 
 ```{r getJUSTVIBINplaylist}
-playlist2 <- request("https://api.spotify.com/v1/playlists/7CfKg9izzVp9BkFWuQIbQ6") |> 
-  req_method("GET") |> 
-  req_headers(
-    Authorization = paste0("Bearer ", spotify_access_token)) |> 
-  req_perform() |>
-  resp_body_json()
+# playlist2 <- request("https://api.spotify.com/v1/playlists/7CfKg9izzVp9BkFWuQIbQ6") |> 
+#   req_method("GET") |> 
+#   req_headers(
+#     Authorization = paste0("Bearer ", spotify_access_token)) |> 
+#   req_perform() |>
+#   resp_body_json()
 ```
 
 
@@ -88,37 +88,35 @@ playlist3 <- request("https://api.spotify.com/v1/playlists/5zkGkYCwKGHnRfkpPRRo3
 
 
 ```{r extractsongs}
-
-B4Bars <- data.frame(
-  song_name = unlist(lapply(playlist$tracks$items, FUN = function(x) {x$track$name})),
-  song_id = unlist(lapply(playlist$tracks$items, FUN = function(x) {x$track$id})),
-  artist_name = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
-  album_art = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
-  track_duration = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$duration_ms})),
-  popularity = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$popularity})),
-  explicit = unlist(lapply(playlist$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
-)
-
-HomeUrban <- data.frame(
-  song_name = unlist(lapply(playlist1$tracks$items, FUN = function(x) {x$track$name})),
-  song_id = unlist(lapply(playlist1$tracks$items, FUN = function(x) {x$track$id})),
-  artist_name = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
-  album_art = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
-  track_duration = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$duration_ms})),
-  popularity = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$popularity})),
-  explicit = unlist(lapply(playlist1$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
-)
-
-Justvibin <- data.frame(
-  song_name = unlist(lapply(playlist2$tracks$items, FUN = function(x) {x$track$name})),
-  song_id = unlist(lapply(playlist2$tracks$items, FUN = function(x) {x$track$id})),
-  artist_name = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
-  album_art = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
-  track_duration = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$duration_ms})),
-  popularity = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$popularity})),
-  explicit = unlist(lapply(playlist2$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
-)
-
+# B4Bars <- data.frame(
+#   song_name = unlist(lapply(playlist$tracks$items, FUN = function(x) {x$track$name})),
+#   song_id = unlist(lapply(playlist$tracks$items, FUN = function(x) {x$track$id})),
+#   artist_name = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
+#   album_art = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
+#   track_duration = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$duration_ms})),
+#   popularity = unlist(lapply(playlist$tracks$items, FUN = function(item) {item$track$popularity})),
+#   explicit = unlist(lapply(playlist$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
+# )
+# 
+# HomeUrban <- data.frame(
+#   song_name = unlist(lapply(playlist1$tracks$items, FUN = function(x) {x$track$name})),
+#   song_id = unlist(lapply(playlist1$tracks$items, FUN = function(x) {x$track$id})),
+#   artist_name = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
+#   album_art = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
+#   track_duration = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$duration_ms})),
+#   popularity = unlist(lapply(playlist1$tracks$items, FUN = function(item) {item$track$popularity})),
+#   explicit = unlist(lapply(playlist1$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
+# )
+# 
+# Justvibin <- data.frame(
+#   song_name = unlist(lapply(playlist2$tracks$items, FUN = function(x) {x$track$name})),
+#   song_id = unlist(lapply(playlist2$tracks$items, FUN = function(x) {x$track$id})),
+#   artist_name = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$album$artists[[1]]$name})),
+#   album_art = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$album$images[[1]]$url})),
+#   track_duration = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$duration_ms})),
+#   popularity = unlist(lapply(playlist2$tracks$items, FUN = function(item) {item$track$popularity})),
+#   explicit = unlist(lapply(playlist2$tracks$items, FUN = function(item) {if (item$track$explicit) "explicit" else "clean"}))
+# )
 
 Pschoolvo1 <- data.frame(
   song_name = unlist(lapply(playlist3$tracks$items, FUN = function(x) {x$track$name})),
@@ -186,7 +184,7 @@ Pschoolvo1$genres <- unlist(lapply(response$tracks, FUN = function(x) {
 
 
 
-```{r table1}
+```{r table}
 # gt table
 gt_table <- Pschoolvo1 |> 
   select(album_art, song_name, artist_name, track_duration, popularity, explicit, album_type, genres) |> 
@@ -244,7 +242,7 @@ gt_table
 
 ### Row {height="10%"}
 
-```{r, sendtoojs1}
+```{r, sendtoojs}
 #| echo: false
 #| include: false
 ojs_define(rap_ojs = Pschoolvo1)
@@ -286,6 +284,7 @@ html`<div>
     loading="lazy"></iframe>
 </div>`
 ```
+
 
 
 ### Row {height="20%"}
