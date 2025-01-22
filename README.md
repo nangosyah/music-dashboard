@@ -2,7 +2,7 @@
 
 Welcome to the Music Dashboard! 
 
-This interactive dashboard allows you to explore and listen to my curated playlist of rap music.
+This interactive dashboard allows you to explore and listen to my curated playlist.
 
 ## Features
 
