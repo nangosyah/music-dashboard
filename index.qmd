@@ -11,8 +11,5 @@ Explore my curated playlist !
 - **Select a Song**: Choose from my favorite rap hits.
 - **Listen**: Play tracks directly from the dashboard.
 
-### About
-Created by **Tom Nangosyah** based on a tutorial by **Melissa Van Bussel** for [POSIT's 2024 Table Contest](https://posit.co/blog/announcing-the-2024-table-contest/).
-
 ### Get Started
 Select a song from my playlist to enjoy!

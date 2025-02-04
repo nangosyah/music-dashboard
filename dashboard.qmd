@@ -248,7 +248,7 @@ gt_table
 ojs_define(rap_ojs = Pschoolvo1)
 ```
 
-### Row {height="70%"}
+### Row {height="50%"}
 
 ```{ojs}
 //| expandable: false
@@ -287,15 +287,15 @@ html`<div>
 
 
 
-### Row {height="20%"}
+### Row {height="10%"}
 
 :::{.card expandable="false"}
 <div style="background-color: #7D3C98; color: white; border-radius: 10px; padding: 10px; text-align: center; display: flex; align-items: center; justify-content: center; height: 100%;">
 
-  <span style="font-size: 1vw; width: 100%;">
-    This dashboard was created by **Tom Nangosyah** based on a tutorial by **Melissa Van Bussel**<br> You can also implement this dashboard using this  [repo](https://melissavanbussel.github.io/spotify-dashboard).
+  <span style="font-size: 1vw; width: 50%;">
+    Crafted with data and music vibes by **Tom Nangosyah** based on a tutorial by **Melissa Van Bussel**<br>
   </span>
-
+  
 </div>
 :::
 

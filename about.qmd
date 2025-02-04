@@ -20,7 +20,7 @@ toc: false
 
 <big>
 
-# 👋 Hi, I'm naam is Tom
+# 👋 Hi, Ik ben Tom
 
 I'm passionate about data-driven impact, with experience in research, project management, and client relations across agriculture, renewable energy, and micro-finance.
 
