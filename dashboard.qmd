@@ -345,7 +345,7 @@ html`<div style="
   box-shadow: 0 2px 10px rgba(30, 136, 229, 0.3);
 ">
   <span style="font-size: 1.1vw; width: 50%;">
-  Dashboard was inspired and built based on **Melissa Van Bussel** 's tutorial for her Posit 2024 Table Contest. (<em>spotify-dashboard</em>).<br>
+  Dashboard was inspired and built based on **Melissa Van Bussel** 's tutorial for her Posit 2024 Table Contest.<br>
 </span>
 
 </div>
