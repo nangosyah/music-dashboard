@@ -7,13 +7,32 @@
   },
   "quarto": {
     "version": "1.4.0",
-    "engines": ["knitr"]
+    "engines": [
+      "knitr"
+    ]
   },
   "files": {
-    "index.qmd": {},
-    "dashboard.qmd": {},
-    "_quarto.yml": {},
-    "custom.css": {}
+    "index.qmd": {
+      "checksum": "0"
+    },
+    "about.qmd": {
+      "checksum": "0"
+    },
+    "dashboard.qmd": {
+      "checksum": "0"
+    },
+    "_quarto.yml": {
+      "checksum": "0"
+    },
+    "custom.css": {
+      "checksum": "0"
+    },
+    "images/Spotify_Primary_Logo_RGB_Green.png": {
+      "checksum": "0"
+    },
+    "images/tompassport.jpg": {
+      "checksum": "0"
+    }
   },
   "packages": {
     "R": {
@@ -21,9 +40,14 @@
       "repositories": [
         {
           "Name": "CRAN",
-          "URL": "https://cloud.r-project.org"
+          "URL": "https://packagemanager.posit.co/cran/latest"
         }
       ]
     }
+  },
+  "python": null,
+  "environment": {
+    "SPOTIFY_CLIENT_ID": "",
+    "SPOTIFY_CLIENT_SECRET": ""
   }
 }
