@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "metadata": {
+    "appmode": "quarto-static",
+    "entrypoint": "index.qmd",
+    "content_category": "site"
+  },
+  "quarto": {
+    "version": "1.3.0",
+    "engines": [
+      "knitr"
+    ]
+  },
+  "files": {
+    "index.qmd": {
+      "checksum": ""
+    },
+    "about.qmd": {
+      "checksum": ""
+    },
+    "dashboard.qmd": {
+      "checksum": ""
+    },
+    "_quarto.yml": {
+      "checksum": ""
+    },
+    "custom.css": {
+      "checksum": ""
+    }
+  },
+  "packages": {
+    "R": [
+      {
+        "package": "tidyverse",
+        "version": "",
+        "source": "CRAN"
+      },
+      {
+        "package": "httr2",
+        "version": "",
+        "source": "CRAN"
+      },
+      {
+        "package": "gt",
+        "version": "",
+        "source": "CRAN"
+      },
+      {
+        "package": "jsonlite",
+        "version": "",
+        "source": "CRAN"
+      }
+    ]
+  },
+  "python": null,
+  "r": {
+    "version": "4.0.0"
+  }
+}
