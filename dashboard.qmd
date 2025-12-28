@@ -1,9 +1,5 @@
 ---
 title: "Tom's Playlist"
-format: 
-  dashboard: 
-    logo: "images/Spotify_Primary_logo_RGB_Green.png"
-    theme: flatly
 ---
 
 ## Column {width="50%"}
