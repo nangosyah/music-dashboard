@@ -2,59 +2,21 @@
   "version": 1,
   "locale": "en_US",
   "metadata": {
-    "appmode": "quarto-static",
-    "entrypoint": "index.qmd",
-    "content_category": "site"
-  },
-  "quarto": {
-    "version": "1.3.0",
-    "engines": [
-      "knitr"
-    ]
+    "appmode": "static",
+    "entrypoint": "index.html"
   },
   "files": {
-    "index.qmd": {
+    "index.html": {
       "checksum": ""
     },
-    "about.qmd": {
+    "about.html": {
       "checksum": ""
     },
-    "dashboard.qmd": {
-      "checksum": ""
-    },
-    "_quarto.yml": {
+    "dashboard.html": {
       "checksum": ""
     },
     "custom.css": {
       "checksum": ""
     }
-  },
-  "packages": {
-    "R": [
-      {
-        "package": "tidyverse",
-        "version": "",
-        "source": "CRAN"
-      },
-      {
-        "package": "httr2",
-        "version": "",
-        "source": "CRAN"
-      },
-      {
-        "package": "gt",
-        "version": "",
-        "source": "CRAN"
-      },
-      {
-        "package": "jsonlite",
-        "version": "",
-        "source": "CRAN"
-      }
-    ]
-  },
-  "python": null,
-  "r": {
-    "version": "4.0.0"
   }
 }
