@@ -1,0 +1,24 @@
+project:
+  type: website
+
+website:
+  title: "Tom's Music Dashboard"
+  navbar:
+    background: "#1E88E5"
+    foreground: white
+    left:
+      - href: index.qmd
+        text: Home
+      - href: dashboard.qmd
+        text: Dashboard
+
+format:
+  html:
+    theme: flatly
+    css: custom.css
+    toc: true
+    toc-location: left
+    code-fold: true
+    code-tools: false
+    link-external-icon: true
+    link-external-newwindow: true

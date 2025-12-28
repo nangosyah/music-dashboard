@@ -1,15 +1,21 @@
 ---
-title: "Tom's Playlist"
+title: "Tom's Music Dashboard"
 format: html
 ---
 
-## Welcome to My Music Dashboard
+## Welcome
 
-Explore my curated playlist !
+This dashboard showcases my music playlist with data-driven insights from Spotify.
 
-### Features
-- **Select a Song**: Choose from my favorite rap hits.
-- **Listen**: Play tracks directly from the dashboard.
+## About the Playlist
 
-### Get Started
-Select a song from my playlist to enjoy!
+The dashboard features **Private School Vol. 1**, a curated collection of tracks. You can explore detailed information about each song including:
+
+- Song titles and artists
+- Track duration
+- Popularity metrics
+- Album information
+- Genre classification
+- Content ratings
+
+The interactive player allows you to select and listen to any track directly from the dashboard.

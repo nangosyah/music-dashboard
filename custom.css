@@ -1,0 +1,293 @@
+/* ============================================
+   CUSTOM BLUE AND WHITE THEME
+   Tom's Music Dashboard
+   ============================================ */
+
+/* Color Variables */
+:root {
+  --primary-blue: #1E88E5;
+  --light-blue: #E3F2FD;
+  --dark-blue: #1565C0;
+  --accent-blue: #42A5F5;
+  --white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --off-white: #F8F9FA;
+  --text-dark: #263238;
+}
+
+/* ============================================
+   GENERAL STYLES
+   ============================================ */
+
+body {
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--dark-blue);
+  text-decoration: underline;
+}
+
+/* ============================================
+   NAVIGATION / SIDEBAR
+   ============================================ */
+
+.sidebar {
+  background-color: var(--primary-blue) !important;
+}
+
+.sidebar-title {
+  color: var(--white) !important;
+  font-weight: bold;
+}
+
+.sidebar-item a {
+  color: var(--white) !important;
+}
+
+.sidebar-item a:hover {
+  background-color: var(--dark-blue) !important;
+}
+
+.navbar {
+  background-color: var(--primary-blue) !important;
+}
+
+.navbar-brand, .nav-link {
+  color: var(--white) !important;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--light-blue);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(30, 136, 229, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+}
+
+/* ============================================
+   DASHBOARD SPECIFIC
+   ============================================ */
+
+.dashboard-page {
+  background-color: var(--off-white);
+}
+
+.bslib-value-box {
+  background: linear-gradient(135deg, var(--light-blue) 0%, white 100%);
+  border: 1px solid var(--primary-blue);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-blue);
+  border-color: var(--dark-blue);
+}
+
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
+
+pre {
+  background-color: var(--light-blue);
+  border-left: 4px solid var(--primary-blue);
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+table {
+  background-color: var(--white);
+}
+
+thead {
+  background-color: var(--light-blue);
+  color: var(--text-dark);
+}
+
+/* ============================================
+   PLAYLIST PLAYER CONTAINER
+   ============================================ */
+
+.playlist-container {
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(30, 136, 229, 0.15);
+}
+
+/* ============================================
+   CUSTOM FOOTER
+   ============================================ */
+
+.custom-footer {
+  background: linear-gradient(90deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(30, 136, 229, 0.2);
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+select {
+  border: 2px solid var(--primary-blue);
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--dark-blue);
+  box-shadow: 0 0 8px rgba(30, 136, 229, 0.3);
+}
+
+/* ============================================
+   ABOUT PAGE STYLES
+   ============================================ */
+
+.profile-container {
+  background: linear-gradient(135deg, #E3F2FD 0%, white 100%);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(30, 136, 229, 0.15);
+  border: 2px solid #1E88E5;
+}
+
+.profile-image {
+  border: 4px solid #1E88E5;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(30, 136, 229, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 12px 30px rgba(30, 136, 229, 0.4);
+}
+
+.greeting {
+  color: #1E88E5;
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.bio-text {
+  color: #263238;
+  font-size: 1.15em;
+  line-height: 1.8;
+}
+
+.bio-text h3 {
+  color: #1565C0;
+  font-size: 1.6em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #42A5F5;
+  padding-bottom: 10px;
+}
+
+.interest-tag {
+  display: inline-block;
+  background-color: #E3F2FD;
+  color: #1565C0;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  font-weight: 500;
+  border: 1px solid #1E88E5;
+}
+
+.focus-area {
+  background: white;
+  border-left: 4px solid #1E88E5;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30, 136, 229, 0.1);
+  transition: all 0.3s ease;
+}
+
+.focus-area:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
+.social-link {
+  display: inline-block;
+  background: linear-gradient(90deg, #1E88E5 0%, #42A5F5 100%);
+  color: white;
+  padding: 12px 30px;
+  margin: 10px 10px 10px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(30, 136, 229, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.interests-section {
+  background-color: #F8F9FA;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 30px 0;
+  border: 2px solid #E3F2FD;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .greeting {
+    font-size: 2em;
+  }
+}

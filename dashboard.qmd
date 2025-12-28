@@ -3,6 +3,7 @@ title: "Tom's Playlist"
 format: 
   dashboard: 
     logo: "images/Spotify_Primary_logo_RGB_Green.png"
+    theme: flatly
 ---
 
 ## Column {width="50%"}
@@ -185,7 +186,7 @@ Pschoolvo1$genres <- unlist(lapply(response$tracks, FUN = function(x) {
 
 
 ```{r table}
-# gt table
+# gt table with blue and white theme
 gt_table <- Pschoolvo1 |> 
   select(album_art, song_name, artist_name, track_duration, popularity, explicit, album_type, genres) |> 
   gt() |> 
@@ -200,7 +201,9 @@ gt_table <- Pschoolvo1 |>
   ) |> 
   text_transform( 
     locations = cells_body(columns = album_art),
-    fn = function(x) { web_image(url = x, height = 50) }
+    fn = function(x) { 
+      web_image(url = x, height = 50) 
+    }
   ) |> 
   fmt( 
     columns = track_duration, 
@@ -209,29 +212,58 @@ gt_table <- Pschoolvo1 |>
       seconds <- round((x %% 60000) / 1000)
       sprintf("%d:%02d", minutes, seconds) 
     } 
-  ) |> 
-  # cols_nanoplot(
-  #   columns = tempo,
-  #   plot_type = "line",
-  #   new_col_name = "tempos",
-  #   new_col_label = md("**Tempo**"),
-  #   options = nanoplot_options(
-  #     data_point_fill_color = "lightgreen",
-  #     data_point_stroke_color = "lightgreen",
-  #     data_area_fill_color = "lightgreen",
-  #     data_line_stroke_color = "purple"
-  #   )
-  # ) |> 
+  ) |>
+  # Style the table with blue and white theme
+  tab_style(
+    style = list(
+      cell_fill(color = "#E3F2FD"),
+      cell_text(weight = "bold", color = "#1565C0")
+    ),
+    locations = cells_column_labels()
+  ) |>
+  tab_style(
+    style = cell_borders(
+      sides = "bottom",
+      color = "#1E88E5",
+      weight = px(2)
+    ),
+    locations = cells_column_labels()
+  ) |>
+  tab_style(
+    style = list(
+      cell_fill(color = "white"),
+      cell_text(color = "#263238")
+    ),
+    locations = cells_body()
+  ) |>
+  tab_style(
+    style = cell_fill(color = "#F8F9FA"),
+    locations = cells_body(rows = seq(2, nrow(Pschoolvo1), 2))
+  ) |>
   tab_options(
-    table.font.color = "white",
-    table.background.color = "black"
+    table.font.color = "#263238",
+    table.background.color = "white",
+    heading.background.color = "#1E88E5",
+    heading.title.font.size = px(24),
+    heading.subtitle.font.size = px(16),
+    column_labels.font.size = px(14),
+    table.border.top.color = "#1E88E5",
+    table.border.top.width = px(3),
+    table.border.bottom.color = "#1E88E5",
+    table.border.bottom.width = px(3),
+    data_row.padding = px(8),
+    column_labels.padding = px(10)
   ) |> 
+  tab_header(
+    title = md("**Private School Vol. 1 Playlist**"),
+    subtitle = md("*A curated collection of tracks*")
+  ) |>
   tab_footnote(
     footnote = "The popularity of a track is a value between 0 and 100, where 100 represents the most popular and 0 represents the least popular. This metric reflects how frequently a track has been played in recent times.",
     locations = cells_column_labels(columns = popularity)
   ) |> 
   tab_source_note(
-    source_note = md("**Source:** [Piano] (https://api.spotify.com/v1/playlists/48odFcjpfAk4ZGC9Arj6p7)")
+    source_note = md("**Source:** [Spotify Playlist](https://api.spotify.com/v1/playlists/5zkGkYCwKGHnRfkpPRRo3J)")
   )
 
 gt_table
@@ -256,11 +288,11 @@ ojs_define(rap_ojs = Pschoolvo1)
 // import data
 rap_hits = transpose(rap_ojs)
 
-// create dropdown menu
+// create dropdown menu with custom styling
 viewof songDropdown = Inputs.select(
   rap_hits.map(d=> d.song_name),
   {
-  label: "Choose a Song",
+  label: html`<span style="font-size: 18px; color: #1E88E5; font-weight: bold;">Choose a Song</span>`,
   unique: true
   }
 )
@@ -271,17 +303,32 @@ function getSongId(songName) {
   return selectedSong ? selectedSong.song_id : null;
 }
 
-// Embed the iframe based on the selected song
-html`<div>
-  <iframe
-    style="border-radius:12px"
-    src="https://open.spotify.com/embed/track/${getSongId(songDropdown)}?utm_source=generator"
-    width="100%"
-    height="352"
-    frameBorder="0"
-    allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy"></iframe>
+// Embed the iframe based on the selected song with improved styling
+html`<div style="
+  background: linear-gradient(135deg, #E3F2FD 0%, white 100%);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(30, 136, 229, 0.15);
+  border: 2px solid #1E88E5;
+  margin-top: 15px;
+">
+  <div style="
+    background: white;
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  ">
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/${getSongId(songDropdown)}?utm_source=generator&theme=0"
+      width="100%"
+      height="352"
+      frameBorder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </div>
 </div>`
 ```
 
@@ -290,12 +337,21 @@ html`<div>
 ### Row {height="10%"}
 
 :::{.card expandable="false"}
-<div style="background-color: #7D3C98; color: white; border-radius: 10px; padding: 10px; text-align: center; display: flex; align-items: center; justify-content: center; height: 100%;">
+<div style="
+  background: linear-gradient(90deg, #1E88E5 0%, #42A5F5 100%); 
+  color: white; 
+  border-radius: 12px; 
+  padding: 15px; 
+  text-align: center; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  height: 100%;
+  box-shadow: 0 2px 10px rgba(30, 136, 229, 0.3);
+">
+  <span style="font-size: 1.1vw; width: 50%;">
+  Dashboard was inspired and built based on **Melissa Van Bussel** 's tutorial for her Posit 2024 Table Contest. (<em>spotify-dashboard</em>).<br>
+</span>
 
-  <span style="font-size: 1vw; width: 50%;">
-    Crafted with data and music vibes by **Tom Nangosyah** based on a tutorial by **Melissa Van Bussel**<br>
-  </span>
-  
 </div>
 :::
-
