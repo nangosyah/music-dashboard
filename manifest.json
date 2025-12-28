@@ -2,21 +2,29 @@
   "version": 1,
   "locale": "en_US",
   "metadata": {
-    "appmode": "static",
-    "entrypoint": "index.html"
+    "appmode": "quarto-static",
+    "entrypoint": "index.qmd"
+  },
+  "quarto": {
+    "version": "1.4.0",
+    "engines": ["knitr"]
   },
   "files": {
-    "index.html": {
-      "checksum": ""
-    },
-    "about.html": {
-      "checksum": ""
-    },
-    "dashboard.html": {
-      "checksum": ""
-    },
-    "custom.css": {
-      "checksum": ""
+    "index.qmd": {},
+    "about.qmd": {},
+    "dashboard.qmd": {},
+    "_quarto.yml": {},
+    "custom.css": {}
+  },
+  "packages": {
+    "R": {
+      "version": "4.5.1",
+      "repositories": [
+        {
+          "Name": "CRAN",
+          "URL": "https://cloud.r-project.org"
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,4 @@
+tidyverse
+httr2
+gt
+jsonlite
