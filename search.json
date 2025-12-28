@@ -1,32 +1,23 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "👋 Hi, Ik ben Tom\nI’m passionate about data-driven impact, with experience in research, project management, and client relations across agriculture, renewable energy, and micro-finance.\nI enjoy translating ideas into action, delivering meaningful end-to-end programs, solving complex challenges with cross-functional teams, fostering collaboration through engaging meetings, and building shared value relationships with communities, partners, and donors/investors.\nOutside of work, I enjoy music, football, Formula One, and a lot of other sports.\nAt the moment, I am exploring roles that focus on:\n\nHealth Sciences: research, data analytics, bioinformatics\nProject Delivery: within development sectors\nInnovation: pilots, initiatives, processes\nStrategy & Transformation\nData Management\n\nI am also open to interesting conversations about where I can add value!\n\nConnect with Me:\n\nLinkedIn\nGitHub",
-    "crumbs": [
-      "About"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Tom’s Playlist",
+    "title": "Tom’s Music Dashboard",
     "section": "",
-    "text": "Explore my curated playlist !\n\n\n\nSelect a Song: Choose from my favorite rap hits.\nListen: Play tracks directly from the dashboard.\n\n\n\n\nSelect a song from my playlist to enjoy!",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "This dashboard showcases my music playlist with data-driven insights from Spotify."
   },
   {
-    "objectID": "index.html#welcome-to-my-music-dashboard",
-    "href": "index.html#welcome-to-my-music-dashboard",
-    "title": "Tom’s Playlist",
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Tom’s Music Dashboard",
     "section": "",
-    "text": "Explore my curated playlist !\n\n\n\nSelect a Song: Choose from my favorite rap hits.\nListen: Play tracks directly from the dashboard.\n\n\n\n\nSelect a song from my playlist to enjoy!",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "This dashboard showcases my music playlist with data-driven insights from Spotify."
+  },
+  {
+    "objectID": "index.html#about-the-playlist",
+    "href": "index.html#about-the-playlist",
+    "title": "Tom’s Music Dashboard",
+    "section": "About the Playlist",
+    "text": "About the Playlist\nThe dashboard features Private School Vol. 1, a curated collection of tracks. You can explore detailed information about each song including:\n\nSong titles and artists\nTrack duration\nPopularity metrics\nAlbum information\nGenre classification\nContent ratings\n\nThe interactive player allows you to select and listen to any track directly from the dashboard."
   }
 ]
